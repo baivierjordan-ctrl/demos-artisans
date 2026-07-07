@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baguetteria San Rocco | Châtelet — Spécialités italiennes</title>
+<meta name="description" content="Baguetteria San Rocco à Châtelet : spécialités italiennes, paninis pressés, arancini, créations et préparations maison par Renata et Mariella. Rue de Namur 53, 6200 Châtelet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --encre:#211d19;
+    --encre-2:#75695e;
+    --creme:#faf6ee;
+    --basilic:#2e7d4f;
+    --tomate:#c93a2c;
+    --tomate-vive:#e85a45;
+    --mais:#e8b84b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Figtree',sans-serif;
+    background:var(--creme);
+    color:var(--encre);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+  img{display:block;max-width:100%}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--tomate);outline-offset:3px;border-radius:2px}
+
+  .demo-badge{
+    position:relative;z-index:60;
+    background:var(--encre);color:var(--creme);
+    text-align:center;font-size:12px;letter-spacing:.14em;font-weight:700;
+    text-transform:uppercase;padding:7px 12px;
+  }
+
+  /* ===== Cadres photo avec repli élégant ===== */
+  .ph{
+    position:relative;overflow:hidden;background:
+      linear-gradient(140deg,#efe8da 0%,#f6e6c9 55%,#f3d4c4 100%);
+  }
+  .ph::after{ /* étiquette visible seulement si l'image manque */
+    content:attr(data-lib);
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(33,29,25,.5);
+    text-align:center;padding:14px;z-index:0;
+  }
+  .ph img{
+    position:relative;z-index:1;width:100%;height:100%;object-fit:cover;
+    transition:transform .8s cubic-bezier(.22,1,.36,1);
+  }
+  .ph:hover img{transform:scale(1.06)}
+
+  /* ===== Nav ===== */
+  .topbar{
+    position:fixed;top:29px;left:0;right:0;z-index:50;
+    transition:background .4s, box-shadow .4s, top .3s;
+  }
+  .topbar .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:16px;padding-bottom:16px;gap:16px;
+  }
+  .topbar.scrolled{top:0;background:rgba(253,250,243,.92);backdrop-filter:blur(14px);box-shadow:0 8px 30px -18px rgba(33,29,25,.3)}
+  .brand{
+    font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;
+    color:#fff;text-decoration:none;white-space:nowrap;text-shadow:0 2px 14px rgba(0,0,0,.4);
+    transition:color .4s,text-shadow .4s;
+  }
+  .topbar.scrolled .brand{color:var(--basilic);text-shadow:none}
+  .nav-links{display:flex;gap:26px;font-size:.93rem;font-weight:600}
+  .nav-links a{text-decoration:none;color:#fff;opacity:.9;text-shadow:0 1px 10px rgba(0,0,0,.4);transition:color .4s,text-shadow .4s,opacity .2s}
+  .topbar.scrolled .nav-links a{color:var(--encre);text-shadow:none}
+  .nav-links a:hover{opacity:1;color:var(--mais)}
+  .topbar.scrolled .nav-links a:hover{color:var(--tomate)}
+  .call-btn{
+    position:relative;overflow:hidden;
+    background:linear-gradient(120deg,var(--tomate),var(--tomate-vive));
+    color:#fff;font-weight:700;text-decoration:none;
+    padding:11px 22px;border-radius:100px;font-size:.92rem;white-space:nowrap;
+    transition:transform .25s, box-shadow .25s;
+    box-shadow:0 6px 20px rgba(201,58,44,.35);
+  }
+  .call-btn::before{
+    content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+    transform:skewX(-20deg);animation:sheen 3.6s ease-in-out infinite;
+  }
+  @keyframes sheen{0%,60%{left:-80%}100%{left:140%}}
+  .call-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 30px rgba(201,58,44,.5)}
+
+  /* ===== Héro photo plein écran ===== */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:flex-end;
+    overflow:hidden;color:#fff;
+  }
+  .hero .fond{position:absolute;inset:0;z-index:0}
+  .hero .fond img{width:100%;height:118%;object-fit:cover;will-change:transform}
+  .hero .voile{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(20,17,14,.35) 0%, rgba(20,17,14,.15) 40%, rgba(20,17,14,.82) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;width:100%;padding:0 0 84px}
+  .hero .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;
+    color:var(--mais);margin-bottom:22px;
+    opacity:0;animation:fadeUp .9s .2s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .hero .eyebrow::before{content:"";width:34px;height:2px;background:var(--mais)}
+  .hero h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.8rem,8.4vw,6rem);line-height:1.02;max-width:15ch;
+    text-shadow:0 4px 30px rgba(0,0,0,.35);
+  }
+  .hero h1 .mot{display:inline-block;opacity:0;transform:translateY(50px) rotate(2deg);
+    animation:letter .85s cubic-bezier(.22,1,.36,1) forwards}
+  .hero h1 .gold{display:inline-block}
+  .hero h1 .gold.gold-in{opacity:0;animation:letter .85s cubic-bezier(.22,1,.36,1) forwards, shimmer 4.5s linear infinite}
+  @keyframes letter{to{opacity:1;transform:translateY(0) rotate(0)}}
+  .hero h1 .gold{
+    background:linear-gradient(100deg,var(--mais) 20%,#fff3c4 50%,var(--mais) 80%);
+    background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  @keyframes shimmer{0%{background-position:220% 0}100%{background-position:-220% 0}}
+  .hero .sous{
+    margin-top:22px;max-width:52ch;font-size:1.15rem;color:rgba(255,255,255,.88);
+    opacity:0;animation:fadeUp .9s 1s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .hero-ctas{
+    margin-top:34px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;
+    opacity:0;animation:fadeUp .9s 1.2s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .btn-ghost{
+    border:2px solid rgba(255,255,255,.55);color:#fff;
+    text-decoration:none;padding:11px 26px;border-radius:100px;font-weight:600;font-size:.96rem;
+    transition:border-color .3s,color .3s,transform .25s,background .3s;
+  }
+  .btn-ghost:hover{border-color:var(--mais);color:var(--mais);transform:translateY(-2px)}
+  .hero .preuve{
+    margin-top:38px;display:flex;gap:12px;align-items:center;font-size:.95rem;color:rgba(255,255,255,.85);
+    opacity:0;animation:fadeUp .9s 1.4s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .hero .preuve .etoiles span{
+    color:var(--mais);display:inline-block;margin-right:2px;
+    animation:pop .5s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  .hero .preuve .etoiles span:nth-child(1){animation-delay:1.6s}
+  .hero .preuve .etoiles span:nth-child(2){animation-delay:1.72s}
+  .hero .preuve .etoiles span:nth-child(3){animation-delay:1.84s}
+  .hero .preuve .etoiles span:nth-child(4){animation-delay:1.96s}
+  .hero .preuve .etoiles span:nth-child(5){animation-delay:2.08s}
+  @keyframes pop{0%{opacity:0;transform:scale(0) rotate(-40deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ===== Marquee ===== */
+  .marquee{
+    background:var(--tomate);color:#fff;
+    overflow:hidden;padding:15px 0;
+    transform:rotate(-1.2deg) scale(1.02);
+    border-top:2px solid var(--encre);border-bottom:2px solid var(--encre);
+    position:relative;z-index:3;margin-top:-8px;
+    box-shadow:0 10px 30px -12px rgba(201,58,44,.4);
+  }
+  .marquee-track{display:flex;white-space:nowrap;width:max-content;animation:scrollX 26s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-track span{
+    font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;
+    padding:0 22px;display:inline-flex;align-items:center;gap:22px;
+  }
+  .marquee-track span::after{content:"✳";font-size:.85rem;color:var(--mais)}
+  @keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  section{padding:96px 0;position:relative}
+  .reveal{opacity:0;transform:translateY(44px);transition:opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+  .section-head{max-width:640px;margin-bottom:52px}
+  .section-head .eyebrow{
+    font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--tomate);font-weight:700;margin-bottom:16px;
+  }
+  .section-head h2{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;
+  }
+  .section-head p{margin-top:16px;color:var(--encre-2);font-size:1.05rem}
+
+  /* ===== Galerie bento ===== */
+  .bento{
+    display:grid;gap:16px;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:240px 240px;
+  }
+  .bento .ph{border-radius:20px}
+  .bento .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .bento .ph:nth-child(4){grid-column:span 2}
+  .bento .cap{
+    position:absolute;left:14px;bottom:14px;z-index:2;
+    background:rgba(253,250,243,.9);backdrop-filter:blur(4px);
+    border-radius:100px;padding:7px 16px;font-size:.8rem;font-weight:700;color:var(--encre);
+    transform:translateY(8px);opacity:0;transition:opacity .4s,transform .4s;
+  }
+  .bento .ph:hover .cap{opacity:1;transform:translateY(0)}
+  .bento-note{margin-top:18px;font-size:.83rem;color:var(--encre-2);font-style:italic;text-align:center}
+
+  /* ===== Carrousel de la carte ===== */
+  .carte-sec{background:linear-gradient(180deg,var(--creme),#f2ede1 30%,#f2ede1 70%,var(--creme))}
+  .rail-wrap{position:relative}
+  .rail{
+    display:flex;gap:20px;overflow-x:auto;padding:6px 6px 26px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  .rail::-webkit-scrollbar{display:none}
+  .plat{
+    flex:0 0 300px;scroll-snap-align:start;
+    background:#fff;border-radius:20px;overflow:hidden;
+    border:1px solid rgba(33,29,25,.08);
+    box-shadow:0 12px 34px -18px rgba(33,29,25,.25);
+    transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s;
+  }
+  .plat:hover{transform:translateY(-8px);box-shadow:0 26px 50px -20px rgba(201,58,44,.35)}
+  .plat .ph{height:190px}
+  .plat-corps{padding:22px 22px 26px}
+  .plat h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--basilic);margin-bottom:8px}
+  .plat p{font-size:.92rem;color:var(--encre-2)}
+  .plat .tag{
+    display:inline-block;margin-top:14px;font-size:.72rem;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--tomate);
+    border:2px solid rgba(201,58,44,.35);border-radius:100px;padding:5px 12px;
+  }
+  .rail-btns{position:absolute;top:-74px;right:0;display:flex;gap:10px}
+  .rail-btn{
+    width:46px;height:46px;border-radius:50%;border:2px solid rgba(33,29,25,.2);
+    background:#fff;color:var(--encre);font-size:1.2rem;cursor:pointer;
+    transition:border-color .3s,color .3s,transform .2s;
+  }
+  .rail-btn:hover{border-color:var(--tomate);color:var(--tomate);transform:scale(1.08)}
+
+  /* ===== Parallaxe Capricieux ===== */
+  .capricieux{
+    position:relative;min-height:78vh;display:flex;align-items:center;
+    overflow:hidden;color:#fff;padding:110px 0;
+  }
+  .capricieux .fond{position:absolute;inset:0}
+  .capricieux .fond img{width:100%;height:130%;object-fit:cover;will-change:transform}
+  .capricieux .voile{position:absolute;inset:0;background:linear-gradient(100deg, rgba(20,17,14,.85) 20%, rgba(20,17,14,.35) 75%)}
+  .cap-inner{position:relative;z-index:2;max-width:560px}
+  .cap-inner .eyebrow{color:var(--mais);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+  .cap-inner h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;margin-bottom:18px}
+  .cap-inner p{color:rgba(255,255,255,.88);font-size:1.08rem;margin-bottom:14px}
+  .cap-inner ul{list-style:none;margin-top:20px}
+  .cap-inner li{padding:9px 0 9px 28px;position:relative;font-size:1rem;border-top:1px dashed rgba(255,255,255,.25)}
+  .cap-inner li:first-child{border-top:none}
+  .cap-inner li::before{content:"✓";position:absolute;left:2px;color:var(--mais);font-weight:800}
+
+  /* ===== Chiffres ===== */
+  .chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+  .chiffre .val{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,3.8rem);color:var(--tomate);line-height:1}
+  .chiffre .lab{margin-top:8px;font-size:.9rem;color:var(--encre-2);letter-spacing:.06em;text-transform:uppercase}
+
+  /* ===== Commandes ===== */
+  .commandes{background:linear-gradient(160deg,var(--mais),#ffd968);overflow:hidden;position:relative}
+  .commandes::before{
+    content:"MIDI";position:absolute;top:-3rem;left:0;right:0;
+    font-family:'Fraunces',serif;font-weight:700;font-size:clamp(8rem,26vw,18rem);
+    color:rgba(33,29,25,.06);text-align:center;pointer-events:none;line-height:1;
+  }
+  .commandes .section-head .eyebrow{color:#a3541f}
+  .cmd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
+  .cmd-card{
+    background:rgba(255,255,255,.65);border:1px solid rgba(33,29,25,.12);
+    border-radius:20px;padding:32px 28px;backdrop-filter:blur(4px);
+    transition:transform .4s cubic-bezier(.22,1,.36,1), background .4s, box-shadow .4s;
+  }
+  .cmd-card:hover{transform:translateY(-7px) rotate(-.6deg);background:rgba(255,255,255,.9);box-shadow:0 22px 40px -18px rgba(33,29,25,.3)}
+  .cmd-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;margin-bottom:10px;color:var(--tomate)}
+  .cmd-card p{font-size:.95rem;color:rgba(33,29,25,.8)}
+  .cmd-cta{margin-top:46px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative}
+  .cmd-cta .call-btn{background:var(--encre);color:var(--mais);font-size:1.05rem}
+  .cmd-cta p{font-weight:700}
+
+  /* ===== Avis + infos ===== */
+  .infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .avis{
+    border:1px solid rgba(33,29,25,.1);border-radius:20px;padding:36px 32px;
+    margin-bottom:26px;background:#fff;position:relative;overflow:hidden;
+    box-shadow:0 12px 34px -18px rgba(33,29,25,.2);
+  }
+  .avis::before{
+    content:"“";position:absolute;top:-18px;right:14px;
+    font-family:'Fraunces',serif;font-size:9rem;color:rgba(46,125,79,.12);line-height:1;
+  }
+  .avis .etoiles{color:var(--mais);letter-spacing:.14em;font-size:1.1rem}
+  .avis blockquote{font-family:'Fraunces',serif;font-size:1.25rem;line-height:1.5;margin:16px 0 12px;font-style:italic}
+  .avis cite{font-style:normal;font-size:.85rem;color:var(--encre-2)}
+  .infos h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.6rem;color:var(--basilic);margin-bottom:24px}
+  .horaires-table{width:100%;border-collapse:collapse;font-size:1rem}
+  .horaires-table td{padding:11px 0;border-bottom:1px solid rgba(33,29,25,.12)}
+  .horaires-table tr:hover{background:rgba(46,125,79,.06)}
+  .horaires-table td:last-child{text-align:right;font-weight:700}
+  .horaires-table .ferme td{color:var(--encre-2)}
+  .horaires-note{margin-top:14px;font-size:.83rem;color:var(--encre-2);font-style:italic}
+  .contact-bloc p{margin-bottom:20px}
+  .contact-bloc .lib{display:block;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tomate);margin-bottom:4px;font-weight:700}
+  .contact-bloc .val{font-size:1.12rem;font-weight:600;color:var(--encre);text-decoration:none}
+  .contact-bloc a.val:hover{color:var(--tomate)}
+  .map-ph{
+    margin-top:26px;aspect-ratio:16/9;border-radius:20px;
+    background:#f2ede1;border:2px dashed rgba(46,125,79,.4);
+    color:var(--encre-2);display:flex;align-items:center;justify-content:center;
+    font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:12px;
+  }
+
+  /* ===== CTA final sur photo ===== */
+  .final{
+    position:relative;text-align:center;padding:130px 26px;overflow:hidden;color:#fff;
+  }
+  .final .fond{position:absolute;inset:0}
+  .final .fond img{width:100%;height:100%;object-fit:cover}
+  .final .voile{position:absolute;inset:0;background:rgba(20,17,14,.72)}
+  .final h2{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2rem,5.5vw,3.4rem);max-width:20ch;margin:0 auto 18px;position:relative;
+  }
+  .final p{color:rgba(255,255,255,.85);margin-bottom:34px;position:relative}
+  .final .call-btn{font-size:1.15rem;padding:16px 36px;position:relative}
+
+  footer{
+    background:var(--encre);padding:44px 26px;text-align:center;
+    font-size:.88rem;color:rgba(253,250,243,.75);
+  }
+  footer .brand{display:block;margin-bottom:10px;color:var(--mais);font-family:'Fraunces',serif;font-size:1.1rem}
+
+  @media (max-width:860px){
+    .nav-links{display:none}
+    .bento{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}
+    .bento .ph:nth-child(1){grid-column:span 2;grid-row:span 1}
+    .bento .ph:nth-child(4){grid-column:span 1}
+    .cmd-grid{grid-template-columns:1fr}
+    .infos-grid{grid-template-columns:1fr;gap:48px}
+    .chiffres{grid-template-columns:1fr;gap:36px}
+    .rail-btns{display:none}
+    section{padding:72px 0}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    .hero .eyebrow,.hero .sous,.hero-ctas,.hero .preuve{opacity:1}
+    .hero h1 .mot,.hero h1 .gold-in{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Démonstration — proposition « magazine » pour la Baguetteria San Rocco</div>
+
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <a href="#" class="brand">San Rocco</a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#galerie">La vitrine</a>
+      <a href="#carte">La carte</a>
+      <a href="#capricieux">La maison</a>
+      <a href="#commandes">Plateaux</a>
+      <a href="#infos">Horaires</a>
+    </nav>
+    <a class="call-btn" href="tel:+3271385036">☎ 071 38 50 36</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HÉRO PHOTO PLEIN ÉCRAN -->
+  <section class="hero">
+    <div class="fond ph" data-lib="Photo plein écran : vos paninis sortis du grill" id="hero-fond">
+      <img data-local="photos/01-hero.jpg" src="https://images.pexels.com/photos/5555754/pexels-photo-5555754.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Paninis grillés sur planche en bois" loading="eager" onerror="this.remove()">
+    </div>
+    <div class="voile"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Baguetteria · Spécialités italiennes — Châtelet</p>
+      <h1 id="titre-anime">L'Italie est à Châtelet, <span class="gold">et elle est faite maison.</span></h1>
+      <p class="sous">Paninis pressés, sandwiches italiens, arancini, salades et soupe maison — créations et préparations maison par Renata et Mariella, Rue de Namur.</p>
+      <div class="hero-ctas">
+        <a class="call-btn" href="tel:+32475566234">Commander pour midi</a>
+        <a class="btn-ghost" href="#carte">Voir la carte</a>
+      </div>
+      <p class="preuve">
+        <span class="etoiles"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+        Des dizaines d'avis 5 étoiles — « reçus comme des rois ».
+      </p>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track">
+      <span>Paninis pressés</span><span>Sandwiches italiens</span><span>Arancini bolo</span>
+      <span>Salades fraîcheur</span><span>Soupe maison</span><span>Plateaux &amp; traiteur</span>
+      <span>Livraison &amp; emporté</span><span>Créations maison</span>
+    </div>
+  </div>
+
+  <!-- GALERIE BENTO -->
+  <section id="galerie">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">La vitrine</p>
+        <h2>Ça sent l'Italie jusque dans la rue.</h2>
+        <p>Vos photos Facebook et Instagram méritent mieux qu'un fil qui défile — ici, elles deviennent votre vitrine permanente.</p>
+      </div>
+      <div class="bento reveal d1">
+        <figure class="ph" data-lib="Grande photo : le comptoir garni">
+          <img data-local="photos/02-comptoir.jpg" src="https://images.pexels.com/photos/34421469/pexels-photo-34421469.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Assortiment de sandwiches gourmets" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Le comptoir du jour</figcaption>
+        </figure>
+        <figure class="ph" data-lib="Photo : sandwich italien">
+          <img data-local="photos/03-salades.jpg" src="https://images.pexels.com/photos/34352265/pexels-photo-34352265.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Sandwich prosciutto et roquette" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">L'Italie en tranches</figcaption>
+        </figure>
+        <figure class="ph" data-lib="Photo : soupe maison">
+          <img data-local="photos/04-soupe.jpg" src="https://images.pexels.com/photos/3559899/pexels-photo-3559899.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Soupe maison fumante" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Soupe maison</figcaption>
+        </figure>
+        <figure class="ph" data-lib="Photo large : création du moment">
+          <img data-local="photos/05-baguette.jpg" src="https://images.pexels.com/photos/33755326/pexels-photo-33755326.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Sandwich mozzarella, tomate et pesto" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Mozzarella &amp; pesto maison</figcaption>
+        </figure>
+      </div>
+      <p class="bento-note">Photos d'illustration libres de droits (Pexels) — remplacées par vos vraies photos avant mise en ligne.</p>
+    </div>
+  </section>
+
+  <!-- CARTE EN CARROUSEL -->
+  <section id="carte" class="carte-sec">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Au comptoir</p>
+        <h2>Ce qui sort du grill</h2>
+        <p>Faites défiler — aperçu d'exemple, vos vrais produits et prix prendront place ici.</p>
+      </div>
+      <div class="rail-wrap reveal d1">
+        <div class="rail-btns">
+          <button class="rail-btn" id="rail-prec" aria-label="Faire défiler vers la gauche">‹</button>
+          <button class="rail-btn" id="rail-suiv" aria-label="Faire défiler vers la droite">›</button>
+        </div>
+        <div class="rail" id="rail">
+          <article class="plat">
+            <div class="ph" data-lib="Photo : paninis pressés"><img data-local="photos/06-capricieux.jpg" src="https://images.pexels.com/photos/32715053/pexels-photo-32715053.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Panini pressé jambon-fromage" loading="lazy" onerror="this.remove()"></div>
+            <div class="plat-corps">
+              <h3>Paninis pressés</h3>
+              <p>Pressés minute, croustillants dehors, fondants dedans — comme là-bas.</p>
+              <span class="tag">La signature</span>
+            </div>
+          </article>
+          <article class="plat">
+            <div class="ph" data-lib="Photo : sandwiches italiens"><img data-local="photos/07-americain.jpg" src="https://images.pexels.com/photos/30323220/pexels-photo-30323220.png?auto=compress&cs=tinysrgb&w=700" alt="Sandwich italien garni à la main" loading="lazy" onerror="this.remove()"></div>
+            <div class="plat-corps">
+              <h3>Sandwiches italiens</h3>
+              <p>Charcuteries et fromages d'Italie sur pain frais — un voyage à chaque bouchée.</p>
+              <span class="tag">Specialità</span>
+            </div>
+          </article>
+          <article class="plat">
+            <div class="ph" data-lib="Photo : soupe tomate maison"><img data-local="photos/08-salade-bol.jpg" src="https://images.pexels.com/photos/27098505/pexels-photo-27098505.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Soupe tomate maison" loading="lazy" onerror="this.remove()"></div>
+            <div class="plat-corps">
+              <h3>Salades &amp; soupe maison</h3>
+              <p>Fraîcheur du jour et soupe mijotée sur place — l'accompagnement parfait.</p>
+              <span class="tag">Léger &amp; frais</span>
+            </div>
+          </article>
+          <article class="plat">
+            <div class="ph" data-lib="Photo : plateaux sur mesure"><img data-local="photos/09-soupe-bol.jpg" src="https://images.pexels.com/photos/2160296/pexels-photo-2160296.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Création de plateaux à la main" loading="lazy" onerror="this.remove()"></div>
+            <div class="plat-corps">
+              <h3>Plateaux &amp; traiteur</h3>
+              <p>Créés sur mesure pour vos fêtes et réunions — commandez la veille.</p>
+              <span class="tag">Fait maison</span>
+            </div>
+          </article>
+          <article class="plat">
+            <div class="ph" data-lib="Photo : le midi"><img data-local="photos/10-tacos.jpg" src="https://images.pexels.com/photos/37218862/pexels-photo-37218862.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Panini avec salade fraîche" loading="lazy" onerror="this.remove()"></div>
+            <div class="plat-corps">
+              <h3>Le midi, vite et bien</h3>
+              <p>Commandé le matin, prêt à midi — livraison et emporté.</p>
+              <span class="tag">Avant 11h30</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="chiffres reveal d2" style="margin-top:56px">
+        <div class="chiffre"><span class="val" data-count="2000" data-suffix="+">0</span><span class="lab">Abonnés Facebook &amp; Instagram</span></div>
+        <div class="chiffre"><span class="val" data-count="100" data-suffix="%">0</span><span class="lab">Préparations maison</span></div>
+        <div class="chiffre"><span class="val" data-count="55" data-suffix="+">0</span><span class="lab">Avis clients en ligne</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPRICIEUX EN PARALLAXE -->
+  <section id="capricieux" class="capricieux">
+    <div class="fond ph" data-lib="Photo pleine largeur : le grill en action" id="cap-fond">
+      <img data-local="photos/11-ingredients.jpg" src="https://images.pexels.com/photos/2161638/pexels-photo-2161638.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Panini en cuisson sur le grill" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="voile"></div>
+    <div class="wrap">
+      <div class="cap-inner reveal">
+        <p class="eyebrow">La maison</p>
+        <h2>Chez Renata et Mariella, tout est fait maison</h2>
+        <p>Vos clients le disent dans les avis : ici, on est « reçus comme des rois ». Derrière le comptoir, deux patronnes et une règle — tout est préparé sur place :</p>
+        <ul>
+          <li>Paninis pressés à la minute, jamais à l'avance</li>
+          <li>Arancini bolo et préparations maison</li>
+          <li>Primeurs cuisinés sur place</li>
+          <li>Plateaux créés sur mesure pour vos fêtes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMANDES DE MIDI -->
+  <section id="commandes" class="commandes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Plateaux &amp; traiteur</p>
+        <h2>Vos fêtes à l'italienne</h2>
+        <p>Un coup de fil, une date — Renata et Mariella créent le plateau qu'il vous faut.</p>
+      </div>
+      <div class="cmd-grid">
+        <div class="cmd-card reveal">
+          <h3>Plateaux sur mesure</h3>
+          <p>Fêtes de famille, apéros, anniversaires : vos plateaux créés sur commande, à l'italienne.</p>
+        </div>
+        <div class="cmd-card reveal d1">
+          <h3>Réunions &amp; entreprises</h3>
+          <p>Une liste, un appel : les commandes du bureau vous attendent, prêtes à l'heure dite.</p>
+        </div>
+        <div class="cmd-card reveal d2">
+          <h3>Livraison &amp; emporté</h3>
+          <p>Commandé le matin, livré ou prêt à emporter pour midi — Châtelet et alentours.</p>
+        </div>
+      </div>
+      <div class="cmd-cta reveal">
+        <a class="call-btn" href="tel:+3271385036">☎ 071 38 50 36</a>
+        <p>Plateaux : commandez de préférence la veille.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS + INFOS -->
+  <section id="infos">
+    <div class="wrap">
+      <div class="infos-grid">
+        <div>
+          <div class="avis reveal">
+            <div class="etoiles" aria-label="5 étoiles sur 5">★★★★★</div>
+            <blockquote>« Nous avons été reçus comme des rois ! »</blockquote>
+            <cite>Avis client — Google</cite>
+          </div>
+          <h3 class="reveal">Horaires d'ouverture</h3>
+          <table class="horaires-table reveal d1">
+            <tr><td>Lundi</td><td>9h00 – 15h00</td></tr>
+            <tr><td>Mardi</td><td>9h00 – 15h00</td></tr>
+            <tr><td>Mercredi</td><td>9h00 – 15h00</td></tr>
+            <tr><td>Jeudi</td><td>9h00 – 15h00</td></tr>
+            <tr><td>Vendredi</td><td>9h00 – 15h00</td></tr>
+            <tr class="ferme"><td>Samedi</td><td>Fermé</td></tr>
+            <tr class="ferme"><td>Dimanche</td><td>Fermé</td></tr>
+          </table>
+          <p class="horaires-note reveal d2">Horaires d'exemple, à confirmer ensemble — aujourd'hui ils sont introuvables en ligne, et un avis Google en témoigne.</p>
+        </div>
+        <div class="contact-bloc">
+          <h3 class="reveal">Nous trouver</h3>
+          <div class="reveal d1">
+            <p><span class="lib">Adresse</span><span class="val">Rue de Namur 53, 6200 Châtelet</span></p>
+            <p><span class="lib">Téléphone</span><a class="val" href="tel:+3271385036">071 38 50 36</a></p>
+            <p><span class="lib">Suivez-nous</span><span class="val">Facebook &amp; Instagram — Baguetteria SAN ROCCO</span></p>
+            <div class="map-ph">Carte Google Maps interactive intégrée ici</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL SUR PHOTO -->
+  <section class="final">
+    <div class="fond ph" data-lib="Photo : votre création du jour">
+      <img data-local="photos/12-emporter.jpg" src="https://images.pexels.com/photos/8506206/pexels-photo-8506206.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Sandwich généreusement garni" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="voile"></div>
+    <h2 class="reveal">Midi approche — le grill est déjà chaud.</h2>
+    <p class="reveal d1">Commandez maintenant, récupérez sans attendre — Rue de Namur.</p>
+    <a class="call-btn reveal d2" href="tel:+32475566234">☎ Commander pour midi</a>
+  </section>
+
+</main>
+
+<footer>
+  <span class="brand">Baguetteria San Rocco</span>
+  <p>Rue de Namur 53, 6200 Châtelet · 071 38 50 36</p>
+  <p style="margin-top:14px;font-size:.78rem;opacity:.6">Maquette de démonstration — textes et carte donnés à titre d'exemple. Photos d'illustration issues d'une banque d'images libres, à remplacer par vos photos avant mise en ligne.</p>
+</footer>
+
+<script>
+(function(){
+  /* ===== PHOTOS LOCALES =====
+     Pour utiliser les vraies photos du commerce :
+     1) créez un dossier photos/ à côté de ce fichier
+     2) déposez-y les fichiers listés dans les attributs data-local
+        (01-hero.jpg, 02-comptoir.jpg, ... 12-emporter.jpg)
+     3) passez USE_LOCAL à true ci-dessous. C'est tout. */
+  var USE_LOCAL = false;
+  if(USE_LOCAL){
+    document.querySelectorAll('img[data-local]').forEach(function(img){
+      img.src = img.getAttribute('data-local');
+    });
+  }
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Titre : animation mot par mot */
+  if(!reduced){
+    var h1 = document.getElementById('titre-anime');
+    var delay = 0.35;
+    var frag = document.createDocumentFragment();
+    Array.prototype.slice.call(h1.childNodes).forEach(function(node){
+      if(node.nodeType === 3){
+        node.textContent.split(/(\s+)/).forEach(function(part){
+          if(!part) return;
+          if(/^\s+$/.test(part)){ frag.appendChild(document.createTextNode(' ')); return; }
+          var w = document.createElement('span');
+          w.className = 'mot';
+          w.textContent = part;
+          w.style.animationDelay = delay + 's';
+          delay += 0.09;
+          frag.appendChild(w);
+        });
+      } else {
+        node.classList.add('gold-in');
+        node.style.animationDelay = delay + 's, 0s';
+        delay += 0.12;
+        frag.appendChild(node);
+      }
+    });
+    h1.textContent = '';
+    h1.appendChild(frag);
+  }
+
+  /* Marquee : boucle parfaite */
+  var track = document.getElementById('marquee-track');
+  track.innerHTML += track.innerHTML;
+
+  /* Nav */
+  var topbar = document.getElementById('topbar');
+  window.addEventListener('scroll', function(){
+    topbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive:true});
+
+  /* Reveals */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* Parallaxe photos (héro + capricieux) */
+  if(!reduced){
+    var heroImg = document.querySelector('#hero-fond img');
+    var capSec = document.getElementById('capricieux');
+    var capImg = document.querySelector('#cap-fond img');
+    window.addEventListener('scroll', function(){
+      var y = window.scrollY;
+      if(heroImg && y < window.innerHeight * 1.2){
+        heroImg.style.transform = 'translateY(' + (y * 0.28) + 'px)';
+      }
+      if(capImg){
+        var r = capSec.getBoundingClientRect();
+        if(r.top < window.innerHeight && r.bottom > 0){
+          var p = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+          capImg.style.transform = 'translateY(' + ((p - 0.5) * -70) + 'px)';
+        }
+      }
+    }, {passive:true});
+  }
+
+  /* Carrousel : boutons */
+  var rail = document.getElementById('rail');
+  var prec = document.getElementById('rail-prec');
+  var suiv = document.getElementById('rail-suiv');
+  if(prec && suiv){
+    prec.addEventListener('click', function(){ rail.scrollBy({left:-330, behavior:'smooth'}); });
+    suiv.addEventListener('click', function(){ rail.scrollBy({left:330, behavior:'smooth'}); });
+  }
+
+  /* Compteurs animés */
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      var el = e.target;
+      var target = parseFloat(el.dataset.count);
+      var decimals = parseInt(el.dataset.decimals || '0', 10);
+      var suffix = el.dataset.suffix || '';
+      if(reduced){ el.textContent = target.toFixed(decimals) + suffix; return; }
+      var t0 = null, dur = 1400;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min(1, (ts - t0) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, {threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+
+</body>
+</html>
