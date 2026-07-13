@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>ND Toiture — Couvreur à Courcelles | Devis gratuit</title>
+<meta name="description" content="ND Toiture, couvreur-zingueur à Courcelles. Couverture, réparation, démoussage, zinguerie. Le patron sur chaque chantier. Devis gratuit dans tout le Hainaut.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate-900:#14181b; --slate-800:#1b2126; --slate-700:#2a333a;
+    --paper:#f6f7f8; --paper-2:#e9edef; --ink:#191e21;
+    --tile:#c65a2e; --tile-dark:#a8471f; --tile-soft:#e08a5f;
+    --zinc:#7f8c95; --zinc-light:#aeb8bf;
+    --line:rgba(255,255,255,.10); --line-dark:rgba(20,24,27,.10);
+    --maxw:1120px;
+    --r:14px;
+    --shadow:0 18px 50px -20px rgba(20,24,27,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Bricolage Grotesque','Inter',sans-serif;line-height:1.05;letter-spacing:-.02em;font-weight:800}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--tile)}
+  .btn{
+    display:inline-flex;align-items:center;gap:.55em;font-family:'Inter',sans-serif;font-weight:600;font-size:.98rem;
+    padding:.85em 1.35em;border-radius:100px;border:1px solid transparent;cursor:pointer;transition:transform .15s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .btn--tile{background:var(--tile);color:#fff}
+  .btn--tile:hover{background:var(--tile-dark);transform:translateY(-2px);box-shadow:0 12px 24px -12px var(--tile-dark)}
+  .btn--ghost{background:transparent;color:#fff;border-color:var(--line)}
+  .btn--ghost:hover{border-color:#fff;transform:translateY(-2px)}
+  .btn--dark{background:var(--slate-900);color:#fff}
+  .btn--dark:hover{background:var(--slate-700);transform:translateY(-2px)}
+  :focus-visible{outline:3px solid var(--tile);outline-offset:2px;border-radius:4px}
+
+  /* ---------- Roofline divider (signature) ---------- */
+  .roofline{display:block;width:100%;height:22px;color:var(--tile)}
+  .roofline--flip{transform:scaleY(-1)}
+
+  /* ---------- Header ---------- */
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(20,24,27,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff}
+  .brand__mark{width:30px;height:30px;color:var(--tile)}
+  .brand__name{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:.02em;font-size:1.12rem}
+  .brand__name b{color:var(--tile);font-weight:800}
+  .nav{display:flex;align-items:center;gap:28px}
+  .nav a.nav__link{color:var(--zinc-light);font-size:.92rem;font-weight:500;transition:color .2s}
+  .nav a.nav__link:hover{color:#fff}
+  .header-cta{display:flex;align-items:center;gap:14px}
+  .header-tel{color:#fff;font-weight:700;font-size:.98rem;white-space:nowrap}
+  @media(max-width:860px){.nav__link{display:none}.header-tel{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;background:var(--slate-900);color:#fff;overflow:hidden;padding:76px 0 0}
+  .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hero__kick{margin-bottom:18px}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4.1rem);margin-bottom:20px}
+  .hero h1 .hl{color:var(--tile)}
+  .hero__sub{font-size:1.12rem;color:var(--zinc-light);max-width:34ch;margin-bottom:30px}
+  .hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+  .hero__chips{display:flex;flex-wrap:wrap;gap:10px 22px;padding-top:22px;border-top:1px solid var(--line)}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--zinc-light);font-weight:500}
+  .chip svg{width:18px;height:18px;color:var(--tile);flex:none}
+  .chip b{color:#fff}
+  .hero__art{position:relative}
+  .hero__scene{width:100%;height:auto;border-radius:var(--r);box-shadow:var(--shadow)}
+  .hero__badge{position:absolute;left:-14px;bottom:22px;background:#fff;color:var(--ink);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+  .hero__badge .stars{color:var(--tile);font-weight:800;font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;line-height:1}
+  .hero__badge small{display:block;color:var(--zinc);font-weight:600;font-size:.72rem;letter-spacing:.02em}
+  @media(max-width:860px){
+    .hero{padding:56px 0 0}
+    .hero__grid{grid-template-columns:1fr;gap:30px}
+    .hero__sub{max-width:none}
+    .hero__badge{left:12px}
+  }
+
+  /* ---------- Trust bar ---------- */
+  .trustbar{background:var(--slate-800);color:var(--zinc-light);border-top:1px solid var(--line)}
+  .trustbar .wrap{display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:center;padding:16px 24px;font-size:.86rem;font-weight:500}
+  .trustbar span{display:inline-flex;align-items:center;gap:8px}
+  .trustbar b{color:#fff;font-weight:700}
+  .trustbar .dot{color:var(--tile)}
+
+  /* ---------- Generic section ---------- */
+  .section{padding:84px 0}
+  .section--light{background:var(--paper)}
+  .section--alt{background:var(--paper-2)}
+  .section--dark{background:var(--slate-900);color:#fff}
+  .sec-head{max-width:640px;margin-bottom:44px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:12px 0 14px}
+  .sec-head p{color:var(--zinc);font-size:1.05rem}
+  .section--dark .sec-head p{color:var(--zinc-light)}
+
+  /* ---------- Before / After ---------- */
+  .ba{position:relative;width:100%;aspect-ratio:8/5;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);user-select:none;touch-action:none;background:var(--slate-800)}
+  .ba__layer{position:absolute;inset:0}
+  .ba__layer svg{width:100%;height:100%}
+  .ba__before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+  .ba__range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+  .ba__handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+  .ba__grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--slate-900);display:flex;align-items:center;justify-content:center;font-weight:800;box-shadow:var(--shadow)}
+  .ba__tag{position:absolute;bottom:14px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(20,24,27,.6);padding:5px 11px;border-radius:100px;backdrop-filter:blur(3px)}
+  .ba__tag--before{left:14px}
+  .ba__tag--after{right:14px;background:var(--tile)}
+  .ba__note{margin-top:14px;font-size:.9rem;color:var(--zinc);text-align:center}
+  .ba__note b{color:var(--tile)}
+
+  /* ---------- Services grid ---------- */
+  .grid-services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .svc{background:#fff;border:1px solid var(--line-dark);border-radius:var(--r);padding:26px 24px;transition:transform .18s ease, box-shadow .2s ease, border-color .2s}
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+  .svc__ic{width:42px;height:42px;color:var(--tile);margin-bottom:16px}
+  .svc h3{font-size:1.14rem;margin-bottom:6px}
+  .svc p{color:var(--zinc);font-size:.94rem}
+  @media(max-width:860px){.grid-services{grid-template-columns:1fr}}
+
+  /* ---------- Types (SVG cards) ---------- */
+  .grid-types{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .type{border-radius:var(--r);overflow:hidden;background:var(--slate-800);position:relative}
+  .type svg{width:100%;height:170px}
+  .type__cap{padding:16px 18px}
+  .type__cap h3{color:#fff;font-size:1.08rem}
+  .type__cap p{color:var(--zinc-light);font-size:.88rem}
+  @media(max-width:860px){.grid-types{grid-template-columns:1fr}}
+
+  /* ---------- Zone ---------- */
+  .zone__chips{display:flex;flex-wrap:wrap;gap:10px}
+  .zone__chip{background:#fff;border:1px solid var(--line-dark);border-radius:100px;padding:8px 16px;font-weight:600;font-size:.92rem;color:var(--ink)}
+  .zone__chip--star{background:var(--slate-900);color:#fff;border-color:var(--slate-900)}
+  .zone__chip--star b{color:var(--tile)}
+
+  /* ---------- Reviews ---------- */
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px}
+  .rev{background:var(--slate-800);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .rev__stars{color:var(--tile);font-weight:800;letter-spacing:.05em;margin-bottom:10px}
+  .rev p{color:var(--zinc-light);font-size:.95rem;font-style:italic}
+  .rev__src{margin-top:14px;font-size:.78rem;color:var(--zinc);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .rev--ph{display:flex;align-items:center;justify-content:center;text-align:center;border-style:dashed;border-color:var(--zinc);background:transparent}
+  .rev--ph p{color:var(--zinc);font-style:normal;font-weight:500}
+  .rev-agg{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:center;color:var(--zinc-light);font-size:.9rem}
+  .rev-agg b{color:#fff}
+  .rev-agg .big{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;color:var(--tile);font-weight:800}
+  @media(max-width:860px){.reviews{grid-template-columns:1fr}}
+
+  /* ---------- Devis CTA ---------- */
+  .devis{background:var(--tile);color:#fff}
+  .devis .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:70px 24px}
+  .devis h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px;color:#fff}
+  .devis p{color:rgba(255,255,255,.9);font-size:1.08rem;max-width:40ch;margin-bottom:24px}
+  .devis__actions{display:flex;flex-wrap:wrap;gap:14px}
+  .devis__actions .btn--dark{background:var(--slate-900)}
+  .form{background:#fff;color:var(--ink);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+  .form h3{font-size:1.15rem;margin-bottom:4px}
+  .form .sub{color:var(--zinc);font-size:.88rem;margin-bottom:18px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
+  .field input,.field textarea{width:100%;border:1px solid var(--paper-2);background:var(--paper);border-radius:10px;padding:11px 13px;font:inherit;font-size:.95rem}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--tile)}
+  .form .btn{width:100%;justify-content:center}
+  .form__hint{font-size:.74rem;color:var(--zinc);text-align:center;margin-top:10px}
+  @media(max-width:860px){.devis .wrap{grid-template-columns:1fr;gap:28px;padding:52px 24px}}
+
+  /* ---------- Footer ---------- */
+  .site-footer{background:var(--slate-900);color:var(--zinc-light);padding:52px 0 26px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:30px;border-bottom:1px solid var(--line)}
+  .site-footer .brand{margin-bottom:14px}
+  .site-footer h4{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;font-family:'Inter',sans-serif;font-weight:700}
+  .site-footer a{color:var(--zinc-light)}
+  .site-footer a:hover{color:#fff}
+  .foot-line{display:block;margin-bottom:7px;font-size:.92rem}
+  .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:20px;font-size:.78rem;color:var(--zinc)}
+  @media(max-width:860px){.footer-grid{grid-template-columns:1fr;gap:26px}}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn,.svc,.type{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ND Toiture, accueil">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M2 17 16 5l14 12" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M6 15.5V27h20V15.5" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M13 27v-7h6v7" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand__name">ND <b>Toiture</b></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="nav__link" href="#realisations">Réalisations</a>
+      <a class="nav__link" href="#services">Services</a>
+      <a class="nav__link" href="#zone">Zone</a>
+      <a class="nav__link" href="#avis">Avis</a>
+      <div class="header-cta">
+        <a class="header-tel" href="tel:+32475610724">0475 61 07 24</a>
+        <a class="btn btn--tile" href="#devis">Devis gratuit</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <div class="hero__kick eyebrow reveal">Couvreur · Zingueur · Courcelles</div>
+        <h1 class="reveal">Votre toit, entre<br>les mains du <span class="hl">patron</span>.</h1>
+        <p class="hero__sub reveal">Couverture, réparation, zinguerie. Un seul interlocuteur, du devis à la dernière ardoise — à Courcelles et dans tout le Hainaut.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--tile" href="tel:+32475610724">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2Z" fill="currentColor"/></svg>
+            Demander un devis gratuit
+          </a>
+          <a class="btn btn--ghost" href="#realisations">Voir des chantiers</a>
+        </div>
+        <div class="hero__chips reveal">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .6-5.3 4.6L18.4 21 12 17.3 5.6 21l1.7-7.3L2 9.1l7-.6L12 2Z"/></svg><b>4,0</b>&nbsp;sur Google</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10" stroke-linecap="round" stroke-linejoin="round"/></svg>Devis gratuit 7j/7</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10" stroke-linecap="round" stroke-linejoin="round"/></svg>Travaux par le patron</span>
+        </div>
+      </div>
+      <div class="hero__art reveal">
+        <!-- Roof scene (after / clean) -->
+        <svg class="hero__scene" viewBox="0 0 800 500" role="img" aria-label="Illustration d'une toiture neuve">
+          <defs>
+            <linearGradient id="skyH" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2c3a44"/><stop offset="1" stop-color="#1b2126"/>
+            </linearGradient>
+            <linearGradient id="tileH" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#d76a3c"/><stop offset="1" stop-color="#b04e24"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#skyH)"/>
+          <circle cx="640" cy="110" r="46" fill="#e0b96a" opacity=".9"/>
+          <circle cx="640" cy="110" r="70" fill="#e0b96a" opacity=".12"/>
+          <!-- wall -->
+          <rect x="150" y="330" width="500" height="170" fill="#2a333a"/>
+          <rect x="360" y="380" width="80" height="120" fill="#1b2126"/>
+          <!-- roof body -->
+          <path d="M400 120 690 340 110 340Z" fill="url(#tileH)"/>
+          <!-- tile rows -->
+          <g stroke="#8f3d1c" stroke-width="3" opacity=".5">
+            <path d="M168 300 632 300" transform="translate(0,0)"/>
+          </g>
+          <g stroke="#a8471f" stroke-width="2" opacity=".55">
+            <path d="M150 315 650 315"/><path d="M180 285 620 285"/><path d="M210 255 590 255"/>
+            <path d="M240 225 560 225"/><path d="M270 195 530 195"/><path d="M300 165 500 165"/>
+          </g>
+          <!-- vertical tile hints -->
+          <g stroke="#e08a5f" stroke-width="1.6" opacity=".4">
+            <path d="M400 130 400 335"/><path d="M340 195 300 335"/><path d="M460 195 500 335"/>
+            <path d="M280 255 250 335"/><path d="M520 255 555 335"/>
+          </g>
+          <!-- ridge -->
+          <path d="M400 118 700 340" stroke="#f2e7d6" stroke-width="6" stroke-linecap="round"/>
+          <path d="M400 118 100 340" stroke="#f2e7d6" stroke-width="6" stroke-linecap="round"/>
+          <!-- chimney -->
+          <rect x="300" y="150" width="42" height="70" fill="#33241a"/>
+          <rect x="292" y="142" width="58" height="14" fill="#4a3626"/>
+          <!-- gutter -->
+          <rect x="105" y="336" width="590" height="10" rx="5" fill="#c7cfd4"/>
+        </svg>
+        <div class="hero__badge" aria-hidden="true">
+          <span class="stars">★★★★<span style="color:var(--zinc-light)">★</span></span>
+          <span>4,0 / 5<small>11 avis Google</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="roofline" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24 60 4l60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20V24Z" fill="currentColor"/></svg>
+</section>
+
+<!-- ===================== TRUST BAR ===================== -->
+<section class="trustbar">
+  <div class="wrap">
+    <span><b>Depuis Courcelles</b>, Rue de la Glacerie 152</span>
+    <span class="dot">◆</span>
+    <span><b>Charleroi · Bruxelles · Brabant wallon</b></span>
+    <span class="dot">◆</span>
+    <span>Tuile · Ardoise · Zinc · Roofing</span>
+  </div>
+</section>
+
+<!-- ===================== RÉALISATIONS (before/after) ===================== -->
+<section class="section section--light" id="realisations">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Réalisations</div>
+      <h2>La preuve est sur le toit.</h2>
+      <p>Un toit ne se raconte pas, il se montre. Faites glisser le curseur : à gauche l'état d'avant, à droite le travail fini.</p>
+    </div>
+
+    <div class="ba reveal" id="ba">
+      <!-- AFTER layer (bottom) -->
+      <div class="ba__layer ba__after">
+        <svg viewBox="0 0 800 500" role="img" aria-label="Toiture rénovée">
+          <defs>
+            <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#aecbe0"/><stop offset="1" stop-color="#dfeaf1"/></linearGradient>
+            <linearGradient id="tileA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d76a3c"/><stop offset="1" stop-color="#b04e24"/></linearGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#skyA)"/>
+          <circle cx="660" cy="90" r="40" fill="#fff" opacity=".75"/>
+          <rect x="150" y="330" width="520" height="170" fill="#cdd6db"/>
+          <rect x="360" y="380" width="80" height="120" fill="#9fb0b8"/>
+          <path d="M400 120 700 340 100 340Z" fill="url(#tileA)"/>
+          <g stroke="#a8471f" stroke-width="2" opacity=".55">
+            <path d="M150 315 650 315"/><path d="M180 285 620 285"/><path d="M210 255 590 255"/>
+            <path d="M240 225 560 225"/><path d="M270 195 530 195"/><path d="M300 165 500 165"/>
+          </g>
+          <g stroke="#e08a5f" stroke-width="1.6" opacity=".45">
+            <path d="M400 130 400 335"/><path d="M340 195 300 335"/><path d="M460 195 500 335"/><path d="M280 255 250 335"/><path d="M520 255 555 335"/>
+          </g>
+          <path d="M400 118 700 340M400 118 100 340" stroke="#f4ece0" stroke-width="6" stroke-linecap="round"/>
+          <rect x="300" y="150" width="42" height="70" fill="#5b4636"/><rect x="292" y="142" width="58" height="14" fill="#6d5641"/>
+          <rect x="98" y="336" width="604" height="10" rx="5" fill="#eef3f6"/>
+        </svg>
+      </div>
+      <!-- BEFORE layer (clipped on top) -->
+      <div class="ba__layer ba__before" id="baBefore">
+        <svg viewBox="0 0 800 500" role="img" aria-label="Toiture abîmée avant travaux">
+          <defs>
+            <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a949b"/><stop offset="1" stop-color="#b3bcc1"/></linearGradient>
+            <linearGradient id="tileB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f7f63"/><stop offset="1" stop-color="#6f6249"/></linearGradient>
+          </defs>
+          <rect width="800" height="500" fill="url(#skyB)"/>
+          <rect x="150" y="330" width="520" height="170" fill="#9a9a92"/>
+          <rect x="360" y="380" width="80" height="120" fill="#6a6a63"/>
+          <path d="M400 120 700 340 100 340Z" fill="url(#tileB)"/>
+          <!-- faded rows -->
+          <g stroke="#5c5238" stroke-width="2" opacity=".5">
+            <path d="M150 315 650 315"/><path d="M180 285 620 285"/><path d="M210 255 590 255"/><path d="M240 225 560 225"/><path d="M270 195 530 195"/>
+          </g>
+          <!-- moss patches -->
+          <g fill="#5f7a3f" opacity=".8">
+            <ellipse cx="250" cy="300" rx="34" ry="15"/><ellipse cx="300" cy="270" rx="22" ry="11"/>
+            <ellipse cx="500" cy="290" rx="30" ry="14"/><ellipse cx="470" cy="250" rx="18" ry="9"/>
+            <ellipse cx="380" cy="230" rx="16" ry="8"/>
+          </g>
+          <!-- missing tiles (dark gaps) -->
+          <g fill="#2c2a22">
+            <rect x="420" y="240" width="26" height="20" transform="rotate(6 433 250)"/>
+            <rect x="330" y="290" width="30" height="22" transform="rotate(-4 345 301)"/>
+            <rect x="540" y="300" width="24" height="18" transform="rotate(3 552 309)"/>
+          </g>
+          <!-- water stain -->
+          <path d="M560 330c-20-30-10-70 20-80" stroke="#4b4636" stroke-width="10" fill="none" opacity=".4" stroke-linecap="round"/>
+          <!-- broken ridge -->
+          <path d="M400 118 700 340M400 118 100 340" stroke="#8a7f66" stroke-width="6" stroke-linecap="round" stroke-dasharray="34 12"/>
+          <rect x="300" y="150" width="42" height="70" fill="#3b332a"/><rect x="292" y="142" width="58" height="14" fill="#4a4136"/>
+          <!-- sagging gutter -->
+          <path d="M98 340q302 26 604 0" stroke="#6f6f66" stroke-width="10" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <input type="range" min="0" max="100" value="50" class="ba__range" id="baRange" aria-label="Comparer avant et après">
+      <div class="ba__handle" id="baHandle"><span class="ba__grip">⟷</span></div>
+      <span class="ba__tag ba__tag--before">Avant</span>
+      <span class="ba__tag ba__tag--after">Après</span>
+    </div>
+    <p class="ba__note reveal">Exemple illustratif. <b>Vos vrais chantiers prendront cette place</b> — donnez-moi 4 ou 5 photos et je les mets en ligne.</p>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section section--alt" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Services</div>
+      <h2>Tout ce qui touche à votre toit.</h2>
+      <p>Du démoussage à la toiture neuve, en tuile, ardoise, zinc ou roofing — un seul artisan, du début à la fin.</p>
+    </div>
+    <div class="grid-services">
+      <div class="svc reveal">
+        <svg class="svc__ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 22 20 8l16 14" stroke-linejoin="round"/><path d="M8 20v13h24V20"/><path d="M4 22h32"/></svg>
+        <h3>Couverture complète</h3>
+        <p>Toiture neuve et rénovation : tuile, ardoise naturelle, éternit, tôle et bardage.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="svc__ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 5v9M20 26v9M5 20h9M26 20h9" stroke-linecap="round"/><circle cx="20" cy="20" r="6"/></svg>
+        <h3>Réparation et fuites</h3>
+        <p>Recherche de fuite, tuiles cassées, faîtage, noue, arêtier, garniture de cheminée.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="svc__ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 30c-4 0-7-3-7-7s3-6 6-7c1-5 5-8 10-8s9 3 10 8c4 0 6 3 6 6 0 4-3 8-8 8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 34v-6M22 34v-8M28 34v-5" stroke-linecap="round"/></svg>
+        <h3>Démoussage et traitement</h3>
+        <p>Nettoyage, anti-mousse et hydrofuge pour prolonger la vie de votre couverture.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="svc__ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="6" y="10" width="28" height="20" rx="2"/><path d="M6 16h28M6 22h28M12 10v20M20 10v20M28 10v20"/></svg>
+        <h3>Isolation et pignon</h3>
+        <p>Isolation de toiture, aménagement de grenier et pignons en ardoises.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="svc__ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 12h28v6H6z"/><path d="M9 18v14M31 18v14M9 32h22" stroke-linecap="round"/><path d="M16 24l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Zinguerie et corniches</h3>
+        <p>Gouttières, descentes, corniches et zinguerie en zinc, PVC ou bois.</p>
+      </div>
+      <div class="svc reveal">
+        <svg class="svc__ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="6" y="14" width="28" height="16" rx="1"/><path d="M6 14 20 6l14 8" stroke-linejoin="round"/><rect x="16" y="18" width="8" height="8"/></svg>
+        <h3>Plateforme et Velux</h3>
+        <p>Toiture plate en roofing ou derbigum, pose de Velux et tabatières.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TYPES ===================== -->
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Matériaux</div>
+      <h2>Le bon toit, quel qu'il soit.</h2>
+    </div>
+    <div class="grid-types">
+      <div class="type reveal">
+        <svg viewBox="0 0 300 170" role="img" aria-label="Toiture en tuile"><rect width="300" height="170" fill="#242c31"/><path d="M150 30 270 130H30Z" fill="#c65a2e"/><g stroke="#8f3d1c" stroke-width="2" opacity=".5"><path d="M60 120h180M75 100h150M92 80h116M110 60h80"/></g><path d="M150 28 272 130M150 28 28 130" stroke="#e5d6c2" stroke-width="4"/></svg>
+        <div class="type__cap"><h3>Tuile et ardoise</h3><p>Le classique durable, posé dans les règles.</p></div>
+      </div>
+      <div class="type reveal">
+        <svg viewBox="0 0 300 170" role="img" aria-label="Toiture en zinc"><rect width="300" height="170" fill="#242c31"/><path d="M150 30 270 130H30Z" fill="#9aa7ae"/><g stroke="#6c7a82" stroke-width="3" opacity=".7"><path d="M150 32 200 130M150 32 100 130M120 70 90 130M180 70 210 130"/></g><path d="M150 28 272 130M150 28 28 130" stroke="#e8edf0" stroke-width="4"/></svg>
+        <div class="type__cap"><h3>Zinc et joint debout</h3><p>Lignes nettes, étanchéité longue durée.</p></div>
+      </div>
+      <div class="type reveal">
+        <svg viewBox="0 0 300 170" role="img" aria-label="Toiture plate roofing"><rect width="300" height="170" fill="#242c31"/><rect x="40" y="70" width="220" height="60" fill="#2f3a41"/><rect x="40" y="66" width="220" height="10" fill="#3f4c54"/><path d="M40 76h220" stroke="#c65a2e" stroke-width="3"/><rect x="196" y="40" width="34" height="30" fill="#3a464d"/><path d="M196 40h34" stroke="#c65a2e" stroke-width="3"/></svg>
+        <div class="type__cap"><h3>Plateforme roofing</h3><p>Derbigum et membranes pour toits plats.</p></div>
+      </div>
+    </div>
+  </div>
+  <svg class="roofline roofline--flip" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true" style="color:var(--paper)"><path d="M0 24 60 4l60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20 60-20 60 20V24Z" fill="currentColor"/></svg>
+</section>
+
+<!-- ===================== ZONE ===================== -->
+<section class="section section--light" id="zone">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Zone d'intervention</div>
+      <h2>De Courcelles à Bruxelles.</h2>
+      <p>Basé à Courcelles, j'interviens dans tout le bassin — un coup de fil suffit pour savoir si je passe chez vous.</p>
+    </div>
+    <div class="zone__chips reveal">
+      <span class="zone__chip zone__chip--star"><b>★</b>&nbsp;Courcelles</span>
+      <span class="zone__chip">Trazegnies</span>
+      <span class="zone__chip">Roux</span>
+      <span class="zone__chip">Souvret</span>
+      <span class="zone__chip">Gouy-lez-Piéton</span>
+      <span class="zone__chip">Charleroi</span>
+      <span class="zone__chip">Chapelle-lez-Herlaimont</span>
+      <span class="zone__chip">Bruxelles</span>
+      <span class="zone__chip">Brabant wallon</span>
+      <span class="zone__chip">Mons</span>
+      <span class="zone__chip">Namur</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVIS ===================== -->
+<section class="section section--dark" id="avis">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Vos clients en parlent</div>
+      <h2>La réputation se voit ici, réunie.</h2>
+      <p>Vos notes sont aujourd'hui éparpillées entre Google et Pages d'Or. Sur votre site, elles se rassemblent à un seul endroit — le vôtre.</p>
+    </div>
+    <div class="reviews">
+      <div class="rev reveal">
+        <div class="rev__stars">★★★★★</div>
+        <p>Emplacement d'exemple : vos meilleurs avis Google s'afficheront ici, cités mot pour mot.</p>
+        <div class="rev__src">Exemple — à remplacer</div>
+      </div>
+      <div class="rev reveal">
+        <div class="rev__stars">★★★★★</div>
+        <p>Un deuxième avis client prendra cette place, pour rassurer celui qui hésite encore.</p>
+        <div class="rev__src">Exemple — à remplacer</div>
+      </div>
+      <div class="rev rev--ph reveal">
+        <p>Vos futurs avis<br>viendront ici,<br>récoltés en fin de chantier.</p>
+      </div>
+    </div>
+    <div class="rev-agg reveal">
+      <span><span class="big">4,0 ★</span> &nbsp;<b>Google</b> · 11 avis</span>
+      <span><span class="big">3,8 ★</span> &nbsp;<b>Pages d'Or</b> · 8 avis</span>
+      <span>Réunies et mises en avant sur votre site.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEVIS ===================== -->
+<section class="devis" id="devis">
+  <div class="wrap">
+    <div class="devis__copy reveal">
+      <h2>Un toit qui fuit n'attend pas.</h2>
+      <p>Appelez le patron directement, ou laissez vos coordonnées : réponse et devis gratuit, sans engagement.</p>
+      <div class="devis__actions">
+        <a class="btn btn--dark" href="tel:+32475610724">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2Z"/></svg>
+          0475 61 07 24
+        </a>
+        <a class="btn btn--ghost" href="tel:+3271376114" style="border-color:rgba(255,255,255,.4)">071 37 61 14</a>
+      </div>
+    </div>
+    <form class="form reveal" onsubmit="return false" aria-label="Demande de devis (démonstration)">
+      <h3>Demander un devis</h3>
+      <p class="sub">Décrivez votre toit en deux mots, je vous rappelle.</p>
+      <div class="field"><label for="f-nom">Votre nom</label><input id="f-nom" type="text" placeholder="Jean Dupont"></div>
+      <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" placeholder="0470 00 00 00"></div>
+      <div class="field"><label for="f-msg">Votre projet</label><textarea id="f-msg" rows="3" placeholder="Fuite, démoussage, toiture neuve…"></textarea></div>
+      <button class="btn btn--tile" type="submit">Envoyer ma demande</button>
+      <p class="form__hint">Maquette de démonstration — le formulaire sera relié à votre boîte mail.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="ND Toiture">
+          <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M2 17 16 5l14 12" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M6 15.5V27h20V15.5" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M13 27v-7h6v7" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <span class="brand__name">ND <b>Toiture</b></span>
+        </a>
+        <span class="foot-line">Couvreur-zingueur. Le patron sur chaque chantier, du devis à la dernière ardoise.</span>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a class="foot-line" href="tel:+32475610724">0475 61 07 24</a>
+        <a class="foot-line" href="tel:+3271376114">071 37 61 14</a>
+        <a class="foot-line" href="mailto:contact@nd-toiture.be">contact@nd-toiture.be</a>
+      </div>
+      <div>
+        <h4>Atelier</h4>
+        <span class="foot-line">Rue de la Glacerie 152</span>
+        <span class="foot-line">6180 Courcelles</span>
+        <span class="foot-line">Charleroi · Bruxelles · BW</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© ND Toiture — Courcelles</span>
+      <span>Devis gratuit 7j/7 · Travaux effectués par le patron</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Before / After slider
+  var ba = document.getElementById('ba');
+  if(ba){
+    var range = document.getElementById('baRange');
+    var before = document.getElementById('baBefore');
+    var handle = document.getElementById('baHandle');
+    function setPos(v){
+      var p = Math.max(0, Math.min(100, v));
+      before.style.setProperty('--pos', p + '%');
+      handle.style.left = p + '%';
+    }
+    range.addEventListener('input', function(){ setPos(this.value); });
+    setPos(50);
+  }
+
+  // Scroll reveal
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
