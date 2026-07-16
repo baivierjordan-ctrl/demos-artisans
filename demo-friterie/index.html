@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Friterie du Coin — La vraie frite belge — Maquette de démonstration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Bricolage+Grotesque:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#181410;--panel:#241d16;--accent:#e2a13c;--accent2:#f2c979;--text:#f6efe3;--muted:#b0a389}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;line-height:1.6}
+.demo-badge{position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--accent);color:var(--bg);text-align:center;padding:10px 16px;font-weight:600;font-size:.9rem}
+.demo-badge a{color:inherit;text-decoration:underline}
+header{min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:56px 22px;position:relative;overflow:hidden}
+header .motif{width:74px;height:74px;color:var(--accent);margin-bottom:18px;opacity:.95}
+header .motif svg{width:100%;height:100%}
+h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,7vw,3.6rem);font-weight:700;letter-spacing:-.02em;line-height:1.08}
+.metier{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
+.tagline{color:var(--muted);max-width:520px;margin:16px auto 30px;font-size:1.05rem}
+.cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:600;padding:15px 32px;border-radius:100px;text-decoration:none;font-size:1.02rem}
+.cta-sub{display:block;color:var(--muted);font-size:.82rem;margin-top:10px}
+.deco{position:absolute;color:var(--accent);opacity:.12;width:200px;height:200px}
+.deco svg{width:100%;height:100%}
+.d1{top:-30px;left:-40px;transform:rotate(-15deg)}.d2{bottom:-30px;right:-40px;transform:rotate(20deg)}
+section{max-width:860px;margin:0 auto;padding:56px 22px}
+h2{font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:22px;letter-spacing:-.01em}
+h2 span{color:var(--accent)}
+.carte{background:var(--panel);border-radius:16px;overflow:hidden;box-shadow:0 10px 40px -18px rgba(0,0,0,.35)}
+.ligne{display:flex;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid color-mix(in srgb, var(--muted) 22%, transparent)}
+.ligne:last-child{border:none}
+.ligne .p{color:var(--accent2);font-weight:600;white-space:nowrap}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+.bloc{background:var(--panel);border-radius:16px;padding:26px}
+.horaires div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed color-mix(in srgb, var(--muted) 25%, transparent);font-size:.95rem}
+.horaires div:last-child{border:none}
+.horaires .ouv{color:var(--accent2);font-weight:600}
+.avis{font-style:italic}
+.avis .a{margin-bottom:18px}
+.avis .qui{display:block;font-style:normal;color:var(--muted);font-size:.85rem;margin-top:6px}
+.etoiles{color:var(--accent);letter-spacing:2px;font-size:1.1rem;margin-bottom:12px}
+.extra{background:var(--accent);color:var(--bg);border-radius:16px;padding:26px;font-weight:600;font-size:1.05rem;text-align:center}
+footer{text-align:center;padding:46px 22px 90px;color:var(--muted);font-size:.9rem}
+footer b{color:var(--text)}
+.map{background:var(--panel);border-radius:16px;height:180px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;border:1px dashed color-mix(in srgb, var(--muted) 40%, transparent)}
+</style>
+</head>
+<body>
+<header>
+  <div class="deco d1"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h32l-4 28H20zM22 28l2-18M30 28V8M38 28l-2-20M45 28l3-14"/></svg></div><div class="deco d2"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h32l-4 28H20zM22 28l2-18M30 28V8M38 28l-2-20M45 28l3-14"/></svg></div>
+  <div class="motif"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h32l-4 28H20zM22 28l2-18M30 28V8M38 28l-2-20M45 28l3-14"/></svg></div>
+  <div class="metier">Friterie & snack</div>
+  <h1>Friterie du Coin</h1>
+  <p class="tagline">Cuisson au gras de bœuf, deux bains, comme il se doit.</p>
+  <a class="cta" href="tel:+3200000000">Voir la carte & commander</a>
+  <span class="cta-sub">Commande par téléphone — sans application, sans commission</span>
+</header>
+<section>
+  <h2>Nos <span>prestations</span></h2>
+  <div class="carte"><div class="ligne"><span>Paquet de frites</span><span class="p">3,00 € / 3,50 €</span></div><div class="ligne"><span>Fricadelle · Boulette maison · Mitraillette</span><span class="p">2,80 € — 8,50 €</span></div><div class="ligne"><span>Menu complet frites + snack + boisson</span><span class="p">9,90 €</span></div><div class="ligne"><span>Sauces artisanales</span><span class="p">+1,00 €</span></div><div class="ligne"><span>Grandes commandes (club, école, chantier)</span><span class="p">appelez-nous !</span></div></div>
+</section>
+<section>
+  <div class="grid2">
+    <div class="bloc horaires">
+      <h2>Horaires <span>à jour</span></h2>
+      <div><span>Lundi</span><span>Fermé</span></div>
+      <div><span>Mardi — Vendredi</span><span class="ouv">9h00 – 18h00</span></div>
+      <div><span>Samedi</span><span class="ouv">9h00 – 16h00</span></div>
+      <div><span>Dimanche</span><span>Fermé</span></div>
+      <p style="margin-top:14px;font-size:.85rem;color:var(--muted)">Congés et fermetures exceptionnelles mis à jour en un message — vos clients ne se déplacent plus pour rien.</p>
+    </div>
+    <div class="bloc avis">
+      <h2>Ils en <span>parlent</span></h2>
+      <div class="etoiles">★★★★★</div>
+      <div class="a">« Les horaires sur le site sont TOUJOURS justes. Fini les déplacements pour rien. »<span class="qui">— Kevin</span></div><div class="a">« Commandé par téléphone en voyant la carte en ligne, prêt en 15 min. »<span class="qui">— Sabrina</span></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="extra">Votre carte et vos horaires à jour en 1 message — et la commande directe qui ne paie aucune commission.</div>
+</section>
+<section>
+  <h2>Nous <span>trouver</span></h2>
+  <div class="map">🗺️ Carte Google Maps intégrée — itinéraire en un clic</div>
+</section>
+<footer>
+  <b>Friterie du Coin</b> · Rue de l'Exemple 1, 6000 Votre-Commune · 071 00 00 00<br>
+  Maquette de démonstration — <b>votre commerce peut avoir ce site en 7 jours.</b>
+</footer>
+<div class="demo-badge">✨ MAQUETTE DÉMO — Votre commerce ici, en ligne en 7 jours · Jordan &amp; Justine · 0493 33 47 42</div>
+</body>
+</html>
