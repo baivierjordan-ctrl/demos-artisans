@@ -1,93 +1,155 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="fr"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Friterie du Coin — La vraie frite belge — Maquette de démonstration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Bricolage+Grotesque:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#181410;--panel:#241d16;--accent:#e2a13c;--accent2:#f2c979;--text:#f6efe3;--muted:#b0a389}
+<style>:root{--bg:#181410;--panel:#241d16;--accent:#e2a13c;--text:#f6efe3;--muted:#b0a389;--badge-txt:#181410}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;line-height:1.6}
-.demo-badge{position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--accent);color:var(--bg);text-align:center;padding:10px 16px;font-weight:600;font-size:.9rem}
-.demo-badge a{color:inherit;text-decoration:underline}
-header{min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:56px 22px;position:relative;overflow:hidden}
-header .motif{width:74px;height:74px;color:var(--accent);margin-bottom:18px;opacity:.95}
-header .motif svg{width:100%;height:100%}
-h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,7vw,3.6rem);font-weight:700;letter-spacing:-.02em;line-height:1.08}
-.metier{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
-.tagline{color:var(--muted);max-width:520px;margin:16px auto 30px;font-size:1.05rem}
-.cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:600;padding:15px 32px;border-radius:100px;text-decoration:none;font-size:1.02rem}
-.cta-sub{display:block;color:var(--muted);font-size:.82rem;margin-top:10px}
-.deco{position:absolute;color:var(--accent);opacity:.12;width:200px;height:200px}
-.deco svg{width:100%;height:100%}
-.d1{top:-30px;left:-40px;transform:rotate(-15deg)}.d2{bottom:-30px;right:-40px;transform:rotate(20deg)}
-section{max-width:860px;margin:0 auto;padding:56px 22px}
-h2{font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:22px;letter-spacing:-.01em}
-h2 span{color:var(--accent)}
-.carte{background:var(--panel);border-radius:16px;overflow:hidden;box-shadow:0 10px 40px -18px rgba(0,0,0,.35)}
-.ligne{display:flex;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid color-mix(in srgb, var(--muted) 22%, transparent)}
+body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;line-height:1.65}
+.demo-badge{position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--accent);color:var(--badge-txt,#fff);text-align:center;padding:10px 16px;font-weight:600;font-size:.88rem}
+h1,h2,h3{font-family:'Fraunces',serif;letter-spacing:-.015em}
+header{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0;position:relative;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media svg{width:100%;height:100%}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(to top, var(--bg) 4%, color-mix(in srgb, var(--bg) 55%, transparent) 45%, transparent 90%)}
+.hero-inner{position:relative;z-index:2;padding:0 24px 64px;max-width:900px;margin:0 auto;width:100%}
+.metier{color:var(--accent);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px}
+h1{font-size:clamp(2.4rem,8vw,4.2rem);font-weight:700;line-height:1.05}
+.tagline{color:var(--muted);max-width:560px;margin:16px 0 28px;font-size:1.1rem}
+.cta{display:inline-block;background:var(--accent);color:var(--badge-txt,#fff);font-weight:600;padding:16px 34px;border-radius:100px;text-decoration:none;font-size:1.05rem;box-shadow:0 14px 40px -12px color-mix(in srgb, var(--accent) 70%, transparent)}
+.cta.ghost{background:transparent;color:var(--text);border:1.5px solid color-mix(in srgb,var(--muted) 50%,transparent);box-shadow:none;margin-left:10px}
+.cta-sub{display:block;color:var(--muted);font-size:.84rem;margin-top:12px}
+section{max-width:960px;margin:0 auto;padding:72px 24px}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;margin-bottom:8px}
+h2{font-size:clamp(1.7rem,4.5vw,2.3rem);margin-bottom:14px}
+h2 em{font-style:normal;color:var(--accent)}
+.lead{color:var(--muted);max-width:640px;font-size:1.02rem;margin-bottom:34px}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:720px){.story{grid-template-columns:1fr}}
+.story .portrait{border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(0,0,0,.4);aspect-ratio:4/5}
+.story .portrait img,.story .portrait svg{width:100%;height:100%;object-fit:cover;display:block}
+.story p{margin-bottom:14px;color:color-mix(in srgb, var(--text) 88%, var(--muted))}
+.sign{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--accent);margin-top:8px}
+.carte{background:var(--panel);border-radius:18px;overflow:hidden;box-shadow:0 14px 44px -20px rgba(0,0,0,.3)}
+.ligne{padding:20px 26px;border-bottom:1px solid color-mix(in srgb, var(--muted) 20%, transparent)}
 .ligne:last-child{border:none}
-.ligne .p{color:var(--accent2);font-weight:600;white-space:nowrap}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:640px){.grid2{grid-template-columns:1fr}}
-.bloc{background:var(--panel);border-radius:16px;padding:26px}
-.horaires div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed color-mix(in srgb, var(--muted) 25%, transparent);font-size:.95rem}
+.ligne .top{display:flex;justify-content:space-between;gap:16px;font-weight:600}
+.ligne .p{color:var(--accent);white-space:nowrap;font-family:'Fraunces',serif;font-size:1.05rem}
+.ligne .desc{color:var(--muted);font-size:.9rem;margin-top:4px}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.galerie{grid-template-columns:repeat(2,1fr)}}
+.galerie .tuile{border-radius:14px;overflow:hidden;aspect-ratio:1;position:relative}
+.galerie .tuile img,.galerie .tuile svg{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.galerie .tuile:hover img{transform:scale(1.05)}
+.galerie .cap{position:absolute;bottom:0;left:0;right:0;padding:22px 14px 10px;font-size:.82rem;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:720px){.trois{grid-template-columns:1fr}}
+.bloc{background:var(--panel);border-radius:16px;padding:28px}
+.bloc .ico{width:44px;height:44px;color:var(--accent);margin-bottom:14px}
+.bloc .ico svg{width:100%;height:100%}
+.bloc h3{font-size:1.1rem;margin-bottom:8px}
+.bloc p{color:var(--muted);font-size:.92rem}
+.avisgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:720px){.avisgrid{grid-template-columns:1fr}}
+.avis{background:var(--panel);border-radius:16px;padding:26px;font-style:italic}
+.avis .et{color:var(--accent);letter-spacing:2px;margin-bottom:10px;font-style:normal}
+.avis .qui{display:block;font-style:normal;color:var(--muted);font-size:.85rem;margin-top:12px;font-weight:600}
+.faq details{background:var(--panel);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{padding:18px 22px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-family:'Fraunces',serif;font-size:1.4rem;color:var(--accent)}
+.faq details[open] summary::after{content:'–'}
+.faq .rep{padding:0 22px 18px;color:var(--muted);font-size:.94rem}
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.infos{grid-template-columns:1fr}}
+.horaires div{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed color-mix(in srgb, var(--muted) 25%, transparent);font-size:.95rem}
 .horaires div:last-child{border:none}
-.horaires .ouv{color:var(--accent2);font-weight:600}
-.avis{font-style:italic}
-.avis .a{margin-bottom:18px}
-.avis .qui{display:block;font-style:normal;color:var(--muted);font-size:.85rem;margin-top:6px}
-.etoiles{color:var(--accent);letter-spacing:2px;font-size:1.1rem;margin-bottom:12px}
-.extra{background:var(--accent);color:var(--bg);border-radius:16px;padding:26px;font-weight:600;font-size:1.05rem;text-align:center}
-footer{text-align:center;padding:46px 22px 90px;color:var(--muted);font-size:.9rem}
+.horaires .ouv{color:var(--accent);font-weight:600}
+.bandeau{background:var(--accent);color:var(--badge-txt,#fff);border-radius:18px;padding:36px 30px;text-align:center}
+.bandeau h2{color:inherit;margin-bottom:8px}
+.bandeau p{opacity:.9;max-width:560px;margin:0 auto 20px}
+.bandeau .cta{background:var(--bg);color:var(--text)}
+.map{background:var(--panel);border-radius:16px;height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted);border:1px dashed color-mix(in srgb, var(--muted) 40%, transparent)}
+footer{text-align:center;padding:50px 24px 96px;color:var(--muted);font-size:.9rem}
 footer b{color:var(--text)}
-.map{background:var(--panel);border-radius:16px;height:180px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;border:1px dashed color-mix(in srgb, var(--muted) 40%, transparent)}
 </style>
-</head>
-<body>
+</head><body>
 <header>
-  <div class="deco d1"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h32l-4 28H20zM22 28l2-18M30 28V8M38 28l-2-20M45 28l3-14"/></svg></div><div class="deco d2"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h32l-4 28H20zM22 28l2-18M30 28V8M38 28l-2-20M45 28l3-14"/></svg></div>
-  <div class="motif"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h32l-4 28H20zM22 28l2-18M30 28V8M38 28l-2-20M45 28l3-14"/></svg></div>
-  <div class="metier">Friterie & snack</div>
-  <h1>Friterie du Coin</h1>
-  <p class="tagline">Cuisson au gras de bœuf, deux bains, comme il se doit.</p>
-  <a class="cta" href="tel:+3200000000">Voir la carte & commander</a>
-  <span class="cta-sub">Commande par téléphone — sans application, sans commission</span>
+  <div class="hero-media"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="rh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241d16"/><stop offset="1" stop-color="#181410"/></linearGradient></defs><rect width="800" height="600" fill="url(#rh)"/><g transform="translate(400 330)"><path d="M-110 -20 L110 -20 L80 200 L-80 200 Z" fill="#e2a13c"/><path d="M-110 -20 L110 -20 L100 50 L-100 50 Z" fill="#f2c979"/><g fill="#f7dfae" stroke="#d9a94f" stroke-width="3"><rect x="-70" y="-150" width="26" height="150" rx="6" transform="rotate(-14)"/><rect x="-30" y="-170" width="26" height="170" rx="6" transform="rotate(-5)"/><rect x="10" y="-175" width="26" height="175" rx="6" transform="rotate(4)"/><rect x="48" y="-155" width="26" height="155" rx="6" transform="rotate(13)"/><rect x="-12" y="-150" width="26" height="130" rx="6" transform="rotate(-1)"/></g><circle cx="0" cy="115" r="34" fill="#c0392b" opacity=".95"/><circle cx="-6" cy="108" r="10" fill="#e8867a" opacity=".8"/></g><g fill="#e2a13c" opacity=".18"><circle cx="130" cy="120" r="6"/><circle cx="680" cy="180" r="8"/><circle cx="160" cy="470" r="5"/><circle cx="650" cy="460" r="6"/></g></svg></div>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <div class="metier">Friterie & snack</div>
+    <h1>Friterie du Coin</h1>
+    <p class="tagline">Gras de bœuf, double cuisson, sauces maison. La frite comme votre grand-père la connaissait — et les horaires à jour, eux, comme en 2026.</p>
+    <a class="cta" href="tel:+3271000000">Commander par téléphone</a><a class="cta ghost" href="#carte">Voir la carte</a>
+    <span class="cta-sub">Commande directe — sans application, sans commission</span>
+  </div>
 </header>
 <section>
-  <h2>Nos <span>prestations</span></h2>
-  <div class="carte"><div class="ligne"><span>Paquet de frites</span><span class="p">3,00 € / 3,50 €</span></div><div class="ligne"><span>Fricadelle · Boulette maison · Mitraillette</span><span class="p">2,80 € — 8,50 €</span></div><div class="ligne"><span>Menu complet frites + snack + boisson</span><span class="p">9,90 €</span></div><div class="ligne"><span>Sauces artisanales</span><span class="p">+1,00 €</span></div><div class="ligne"><span>Grandes commandes (club, école, chantier)</span><span class="p">appelez-nous !</span></div></div>
+  <div class="eyebrow">Notre histoire</div>
+  <h2>Ici, la frite est une affaire sérieuse</h2>
+  <div class="story">
+    <div><p>Bintje de saison, coupée sur place tous les matins. Premier bain à 140°, repos, deuxième bain à 175° — au gras de bœuf, évidemment. C'est plus long, c'est plus cher, et c'est pour ça que vous revenez.</p>
+ <p>Les sauces ? Maison, pour la plupart. L'andalouse a sa recette depuis 15 ans, et on ne la donnera pas, même sous la torture.</p>
+ <p>On est peut-être un petit baraquement, mais on a des principes de grand restaurant : produits frais, huile changée sans compter, et le sourire même à 23h45.</p><div class="sign">— Le patron (celui avec le tablier)</div></div>
+    <div class="portrait"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="re2a13c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2a13c"/><stop offset="1" stop-color="#a8641e"/></linearGradient></defs><rect width="800" height="600" fill="url(#re2a13c)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6" stroke-linejoin="round"><path d="M-80 -30 L80 -30 L58 150 L-58 150Z" fill="#f2c979"/><g fill="#f7dfae"><rect x="-52" y="-115" width="20" height="110" rx="5" transform="rotate(-10)"/><rect x="-12" y="-130" width="20" height="125" rx="5"/><rect x="30" y="-115" width="20" height="110" rx="5" transform="rotate(9)"/></g></g></svg></div>
+  </div>
+</section>
+<section id="carte">
+  <div class="eyebrow">La carte</div>
+  <h2>Simple, franche, sans surprise</h2>
+  <p class="lead">Les prix ci-dessous sont TOUJOURS à jour — modifiés en un message quand ça bouge. Fini les mauvaises surprises à la caisse.</p>
+  <div class="carte"><div class="ligne"><div class="top"><span>Paquet de frites — petit / grand</span><span class="p">3,00 € / 3,50 €</span></div><div class="desc">Bintje fraîche, double cuisson au gras de bœuf. La base, en majesté.</div></div><div class="ligne"><div class="top"><span>Fricadelle · Boulette sauce lapin · Cervelas</span><span class="p">2,80 € — 4,50 €</span></div><div class="desc">Les classiques, sans trahison. La boulette est faite maison chaque mardi.</div></div><div class="ligne"><div class="top"><span>Mitraillette complète</span><span class="p">8,50 €</span></div><div class="desc">Demi-baguette, viande au choix, frites, crudités, sauce. Un repas. Un vrai.</div></div><div class="ligne"><div class="top"><span>Menu complet — frites + snack + boisson</span><span class="p">9,90 €</span></div><div class="desc">Le combo qui met tout le monde d'accord, du chantier au bureau.</div></div><div class="ligne"><div class="top"><span>Grandes commandes — club, école, chantier</span><span class="p">appelez-nous</span></div><div class="desc">Commandez la veille, tout est prêt à l'heure dite. Facture possible.</div></div></div>
 </section>
 <section>
-  <div class="grid2">
+  <div class="eyebrow">En images</div>
+  <h2>Le comptoir en images</h2>
+  <p class="lead">Illustrations de démonstration — sur VOTRE site : vos frites, votre baraque, votre file de 18h30 qui fait votre fierté.</p>
+  <div class="galerie"><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="re2a13c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2a13c"/><stop offset="1" stop-color="#b97f1e"/></linearGradient></defs><rect width="800" height="600" fill="url(#re2a13c)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6" stroke-linejoin="round"><path d="M-80 -30 L80 -30 L58 150 L-58 150Z" fill="#f2c979"/><g fill="#f7dfae"><rect x="-52" y="-115" width="20" height="110" rx="5" transform="rotate(-10)"/><rect x="-12" y="-130" width="20" height="125" rx="5"/><rect x="30" y="-115" width="20" height="110" rx="5" transform="rotate(9)"/></g></g></svg><div class="cap">La double cuisson</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ra8552f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a8552f"/><stop offset="1" stop-color="#7c3a1c"/></linearGradient></defs><rect width="800" height="600" fill="url(#ra8552f)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6"><circle cx="0" cy="20" r="95" fill="#a8552f"/><path d="M-60 -10 q30 -25 60 -18 q40 8 62 32" fill="none" stroke="#7c3a1c" stroke-width="8" stroke-linecap="round"/><ellipse cx="0" cy="140" rx="130" ry="18" fill="#241d16" opacity=".25" stroke="none"/></g></svg><div class="cap">Boulettes maison</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="r5b7a8c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b7a8c"/><stop offset="1" stop-color="#3d5666"/></linearGradient></defs><rect width="800" height="600" fill="url(#r5b7a8c)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6" stroke-linejoin="round"><path d="M-55 -110 L55 -110 L38 140 L-38 140Z" fill="#e8eef2"/><path d="M-50 -60 L50 -60 L36 110 L-36 110Z" fill="#c0392b"/><rect x="-8" y="-170" width="16" height="80" rx="8" fill="#f2c979"/></g></svg><div class="cap">Boissons fraîches</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="rc0392b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c0392b"/><stop offset="1" stop-color="#8e2a20"/></linearGradient></defs><rect width="800" height="600" fill="url(#rc0392b)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6" stroke-linejoin="round"><path d="M-80 -30 L80 -30 L58 150 L-58 150Z" fill="#f2c979"/><g fill="#f7dfae"><rect x="-52" y="-115" width="20" height="110" rx="5" transform="rotate(-10)"/><rect x="-12" y="-130" width="20" height="125" rx="5"/><rect x="30" y="-115" width="20" height="110" rx="5" transform="rotate(9)"/></g></g></svg><div class="cap">Les sauces artisanales</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="rb97f1e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b97f1e"/><stop offset="1" stop-color="#8a5c12"/></linearGradient></defs><rect width="800" height="600" fill="url(#rb97f1e)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6"><circle cx="0" cy="20" r="95" fill="#a8552f"/><path d="M-60 -10 q30 -25 60 -18 q40 8 62 32" fill="none" stroke="#7c3a1c" stroke-width="8" stroke-linecap="round"/><ellipse cx="0" cy="140" rx="130" ry="18" fill="#241d16" opacity=".25" stroke="none"/></g></svg><div class="cap">Snacks & mitraillettes</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="r6b4f2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b4f2a"/><stop offset="1" stop-color="#4a3419"/></linearGradient></defs><rect width="800" height="600" fill="url(#r6b4f2a)"/><g transform="translate(400 300)" stroke="#241d16" stroke-width="6" stroke-linejoin="round"><path d="M-80 -30 L80 -30 L58 150 L-58 150Z" fill="#f2c979"/><g fill="#f7dfae"><rect x="-52" y="-115" width="20" height="110" rx="5" transform="rotate(-10)"/><rect x="-12" y="-130" width="20" height="125" rx="5"/><rect x="30" y="-115" width="20" height="110" rx="5" transform="rotate(9)"/></g></g></svg><div class="cap">Le comptoir</div></div></div>
+</section>
+<section>
+  <div class="eyebrow">Pourquoi nous</div>
+  <h2>Pourquoi commander en direct</h2>
+  <div class="trois"><div class="bloc"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="28" height="32" rx="4"/><path d="M18 16h12M18 24h12M18 32h7"/></svg></div><h3>Horaires & carte à jour</h3><p>Congés, fermeture exceptionnelle, nouveau snack : mis à jour en un message. Plus jamais de client devant porte close.</p></div><div class="bloc"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24h28M26 16l8 8-8 8M40 10v28"/></svg></div><h3>Sans commission d'appli</h3><p>Takeaway et Uber prennent jusqu'à 30 %. Commandez par téléphone : le prix est le même pour vous, pas pour nous.</p></div><div class="bloc"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M24 14v10l7 5"/></svg></div><h3>Prêt à l'heure dite</h3><p>Commandez par téléphone en voyant la carte : votre commande démarre tout de suite, vous passez juste la prendre.</p></div></div>
+</section>
+<section>
+  <div class="eyebrow">Ils en parlent</div>
+  <h2>La meilleure publicité, <em>c'est vous</em></h2>
+  <div class="avisgrid"><div class="avis"><div class="et">★★★★★</div>« Les horaires sur le site sont TOUJOURS justes. Fini les allers-retours pour rien. »<span class="qui">— Kevin</span></div><div class="avis"><div class="et">★★★★★</div>« Commandé par téléphone en regardant la carte en ligne, prêt en 15 minutes chrono. »<span class="qui">— Sabrina</span></div><div class="avis"><div class="et">★★★★★</div>« La boulette sauce lapin du mardi. Je dis ça, je dis tout. »<span class="qui">— Michel, client du mardi</span></div></div>
+</section>
+<section class="faq">
+  <div class="eyebrow">Questions fréquentes</div>
+  <h2>Tout ce qu'on nous demande</h2>
+  <details><summary>Peut-on commander à l'avance ?</summary><div class="rep">Oui — par téléphone, même la veille pour les grandes commandes (club, chantier, anniversaire). Tout est prêt à l'heure dite.</div></details><details><summary>Acceptez-vous la carte bancaire ?</summary><div class="rep">Oui, carte et paiement mobile — plus besoin de chercher un distributeur avant de venir.</div></details><details><summary>Pourquoi pas Takeaway ou Uber Eats ?</summary><div class="rep">On y est parfois... mais la commission (jusqu'à 30 %) finit par se payer quelque part. En direct, tout reste dans l'assiette.</div></details><details><summary>La friture est-elle vraiment au gras de bœuf ?</summary><div class="rep">Oui. Toujours. C'est LE débat qu'on ne négocie pas.</div></details>
+</section>
+<section>
+  <div class="bandeau">
+    <h2>Il est quelle heure ? L'heure d'une mitraillette.</h2>
+    <p>Regardez la carte, appelez, c'est prêt quand vous arrivez. La technologie au service de la fricadelle.</p>
+    <a class="cta" href="tel:+3271000000">Commander par téléphone</a>
+  </div>
+</section>
+<section>
+  <div class="eyebrow">Infos pratiques</div>
+  <h2>Nous trouver, nous joindre</h2>
+  <div class="infos">
     <div class="bloc horaires">
-      <h2>Horaires <span>à jour</span></h2>
+      <h3>Horaires — toujours à jour</h3>
       <div><span>Lundi</span><span>Fermé</span></div>
       <div><span>Mardi — Vendredi</span><span class="ouv">9h00 – 18h00</span></div>
       <div><span>Samedi</span><span class="ouv">9h00 – 16h00</span></div>
       <div><span>Dimanche</span><span>Fermé</span></div>
-      <p style="margin-top:14px;font-size:.85rem;color:var(--muted)">Congés et fermetures exceptionnelles mis à jour en un message — vos clients ne se déplacent plus pour rien.</p>
+      <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Congés annoncés ici et sur Google — vos clients ne se déplacent plus pour rien.</p>
     </div>
-    <div class="bloc avis">
-      <h2>Ils en <span>parlent</span></h2>
-      <div class="etoiles">★★★★★</div>
-      <div class="a">« Les horaires sur le site sont TOUJOURS justes. Fini les déplacements pour rien. »<span class="qui">— Kevin</span></div><div class="a">« Commandé par téléphone en voyant la carte en ligne, prêt en 15 min. »<span class="qui">— Sabrina</span></div>
-    </div>
+    <div class="map">🗺️ Carte Google Maps intégrée — itinéraire en un clic</div>
   </div>
-</section>
-<section>
-  <div class="extra">Votre carte et vos horaires à jour en 1 message — et la commande directe qui ne paie aucune commission.</div>
-</section>
-<section>
-  <h2>Nous <span>trouver</span></h2>
-  <div class="map">🗺️ Carte Google Maps intégrée — itinéraire en un clic</div>
 </section>
 <footer>
   <b>Friterie du Coin</b> · Rue de l'Exemple 1, 6000 Votre-Commune · 071 00 00 00<br>
-  Maquette de démonstration — <b>votre commerce peut avoir ce site en 7 jours.</b>
+  Maquette de démonstration — <b>votre commerce peut avoir ce site en 7 jours.</b><br>
+  <span style="font-size:.8rem">Textes et visuels d'illustration : ils seront remplacés par VOS contenus, VOS photos, VOS prix.</span>
 </footer>
-<div class="demo-badge">✨ MAQUETTE DÉMO — Votre commerce ici, en ligne en 7 jours · Jordan &amp; Justine · 0493 33 47 42</div>
-</body>
-</html>
+<div class="demo-badge">✨ MAQUETTE DÉMO — Votre commerce ici, en ligne en 7 jours · 0493 33 47 42 (Jordan) · 0494 58 63 55 (Justine)</div>
+</body></html>

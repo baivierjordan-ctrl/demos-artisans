@@ -1,93 +1,155 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="fr"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Institut Éclat — Beauté & bien-être — Maquette de démonstration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Bricolage+Grotesque:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#faf5f2;--panel:#ffffff;--accent:#a4586c;--accent2:#7d4152;--text:#39292e;--muted:#8c7378}
+<style>:root{--bg:#faf5f2;--panel:#ffffff;--accent:#a4586c;--text:#39292e;--muted:#8c7378;--badge-txt:#ffffff}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;line-height:1.6}
-.demo-badge{position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--accent);color:var(--bg);text-align:center;padding:10px 16px;font-weight:600;font-size:.9rem}
-.demo-badge a{color:inherit;text-decoration:underline}
-header{min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:56px 22px;position:relative;overflow:hidden}
-header .motif{width:74px;height:74px;color:var(--accent);margin-bottom:18px;opacity:.95}
-header .motif svg{width:100%;height:100%}
-h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,7vw,3.6rem);font-weight:700;letter-spacing:-.02em;line-height:1.08}
-.metier{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
-.tagline{color:var(--muted);max-width:520px;margin:16px auto 30px;font-size:1.05rem}
-.cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:600;padding:15px 32px;border-radius:100px;text-decoration:none;font-size:1.02rem}
-.cta-sub{display:block;color:var(--muted);font-size:.82rem;margin-top:10px}
-.deco{position:absolute;color:var(--accent);opacity:.12;width:200px;height:200px}
-.deco svg{width:100%;height:100%}
-.d1{top:-30px;left:-40px;transform:rotate(-15deg)}.d2{bottom:-30px;right:-40px;transform:rotate(20deg)}
-section{max-width:860px;margin:0 auto;padding:56px 22px}
-h2{font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:22px;letter-spacing:-.01em}
-h2 span{color:var(--accent)}
-.carte{background:var(--panel);border-radius:16px;overflow:hidden;box-shadow:0 10px 40px -18px rgba(0,0,0,.35)}
-.ligne{display:flex;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid color-mix(in srgb, var(--muted) 22%, transparent)}
+body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;line-height:1.65}
+.demo-badge{position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--accent);color:var(--badge-txt,#fff);text-align:center;padding:10px 16px;font-weight:600;font-size:.88rem}
+h1,h2,h3{font-family:'Fraunces',serif;letter-spacing:-.015em}
+header{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0;position:relative;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media svg{width:100%;height:100%}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(to top, var(--bg) 4%, color-mix(in srgb, var(--bg) 55%, transparent) 45%, transparent 90%)}
+.hero-inner{position:relative;z-index:2;padding:0 24px 64px;max-width:900px;margin:0 auto;width:100%}
+.metier{color:var(--accent);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px}
+h1{font-size:clamp(2.4rem,8vw,4.2rem);font-weight:700;line-height:1.05}
+.tagline{color:var(--muted);max-width:560px;margin:16px 0 28px;font-size:1.1rem}
+.cta{display:inline-block;background:var(--accent);color:var(--badge-txt,#fff);font-weight:600;padding:16px 34px;border-radius:100px;text-decoration:none;font-size:1.05rem;box-shadow:0 14px 40px -12px color-mix(in srgb, var(--accent) 70%, transparent)}
+.cta.ghost{background:transparent;color:var(--text);border:1.5px solid color-mix(in srgb,var(--muted) 50%,transparent);box-shadow:none;margin-left:10px}
+.cta-sub{display:block;color:var(--muted);font-size:.84rem;margin-top:12px}
+section{max-width:960px;margin:0 auto;padding:72px 24px}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;margin-bottom:8px}
+h2{font-size:clamp(1.7rem,4.5vw,2.3rem);margin-bottom:14px}
+h2 em{font-style:normal;color:var(--accent)}
+.lead{color:var(--muted);max-width:640px;font-size:1.02rem;margin-bottom:34px}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:720px){.story{grid-template-columns:1fr}}
+.story .portrait{border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(0,0,0,.4);aspect-ratio:4/5}
+.story .portrait img,.story .portrait svg{width:100%;height:100%;object-fit:cover;display:block}
+.story p{margin-bottom:14px;color:color-mix(in srgb, var(--text) 88%, var(--muted))}
+.sign{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--accent);margin-top:8px}
+.carte{background:var(--panel);border-radius:18px;overflow:hidden;box-shadow:0 14px 44px -20px rgba(0,0,0,.3)}
+.ligne{padding:20px 26px;border-bottom:1px solid color-mix(in srgb, var(--muted) 20%, transparent)}
 .ligne:last-child{border:none}
-.ligne .p{color:var(--accent2);font-weight:600;white-space:nowrap}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:640px){.grid2{grid-template-columns:1fr}}
-.bloc{background:var(--panel);border-radius:16px;padding:26px}
-.horaires div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed color-mix(in srgb, var(--muted) 25%, transparent);font-size:.95rem}
+.ligne .top{display:flex;justify-content:space-between;gap:16px;font-weight:600}
+.ligne .p{color:var(--accent);white-space:nowrap;font-family:'Fraunces',serif;font-size:1.05rem}
+.ligne .desc{color:var(--muted);font-size:.9rem;margin-top:4px}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.galerie{grid-template-columns:repeat(2,1fr)}}
+.galerie .tuile{border-radius:14px;overflow:hidden;aspect-ratio:1;position:relative}
+.galerie .tuile img,.galerie .tuile svg{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.galerie .tuile:hover img{transform:scale(1.05)}
+.galerie .cap{position:absolute;bottom:0;left:0;right:0;padding:22px 14px 10px;font-size:.82rem;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:720px){.trois{grid-template-columns:1fr}}
+.bloc{background:var(--panel);border-radius:16px;padding:28px}
+.bloc .ico{width:44px;height:44px;color:var(--accent);margin-bottom:14px}
+.bloc .ico svg{width:100%;height:100%}
+.bloc h3{font-size:1.1rem;margin-bottom:8px}
+.bloc p{color:var(--muted);font-size:.92rem}
+.avisgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:720px){.avisgrid{grid-template-columns:1fr}}
+.avis{background:var(--panel);border-radius:16px;padding:26px;font-style:italic}
+.avis .et{color:var(--accent);letter-spacing:2px;margin-bottom:10px;font-style:normal}
+.avis .qui{display:block;font-style:normal;color:var(--muted);font-size:.85rem;margin-top:12px;font-weight:600}
+.faq details{background:var(--panel);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{padding:18px 22px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-family:'Fraunces',serif;font-size:1.4rem;color:var(--accent)}
+.faq details[open] summary::after{content:'–'}
+.faq .rep{padding:0 22px 18px;color:var(--muted);font-size:.94rem}
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.infos{grid-template-columns:1fr}}
+.horaires div{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed color-mix(in srgb, var(--muted) 25%, transparent);font-size:.95rem}
 .horaires div:last-child{border:none}
-.horaires .ouv{color:var(--accent2);font-weight:600}
-.avis{font-style:italic}
-.avis .a{margin-bottom:18px}
-.avis .qui{display:block;font-style:normal;color:var(--muted);font-size:.85rem;margin-top:6px}
-.etoiles{color:var(--accent);letter-spacing:2px;font-size:1.1rem;margin-bottom:12px}
-.extra{background:var(--accent);color:var(--bg);border-radius:16px;padding:26px;font-weight:600;font-size:1.05rem;text-align:center}
-footer{text-align:center;padding:46px 22px 90px;color:var(--muted);font-size:.9rem}
+.horaires .ouv{color:var(--accent);font-weight:600}
+.bandeau{background:var(--accent);color:var(--badge-txt,#fff);border-radius:18px;padding:36px 30px;text-align:center}
+.bandeau h2{color:inherit;margin-bottom:8px}
+.bandeau p{opacity:.9;max-width:560px;margin:0 auto 20px}
+.bandeau .cta{background:var(--bg);color:var(--text)}
+.map{background:var(--panel);border-radius:16px;height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted);border:1px dashed color-mix(in srgb, var(--muted) 40%, transparent)}
+footer{text-align:center;padding:50px 24px 96px;color:var(--muted);font-size:.9rem}
 footer b{color:var(--text)}
-.map{background:var(--panel);border-radius:16px;height:180px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem;border:1px dashed color-mix(in srgb, var(--muted) 40%, transparent)}
 </style>
-</head>
-<body>
+</head><body>
 <header>
-  <div class="deco d1"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M32 56C18 44 14 28 20 12c16 2 28 12 24 32-2 8-6 10-12 12z"/><path d="M32 54C30 40 30 30 36 18"/></svg></div><div class="deco d2"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M32 56C18 44 14 28 20 12c16 2 28 12 24 32-2 8-6 10-12 12z"/><path d="M32 54C30 40 30 30 36 18"/></svg></div>
-  <div class="motif"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M32 56C18 44 14 28 20 12c16 2 28 12 24 32-2 8-6 10-12 12z"/><path d="M32 54C30 40 30 30 36 18"/></svg></div>
-  <div class="metier">Institut de beauté</div>
-  <h1>Institut Éclat</h1>
-  <p class="tagline">Un moment pour vous. Rien que pour vous.</p>
-  <a class="cta" href="tel:+3200000000">Réserver mon soin</a>
-  <span class="cta-sub">En ligne 24h/24 — bons cadeaux à imprimer immédiatement</span>
+  <div class="hero-media"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ih" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e9e6"/><stop offset="1" stop-color="#eeD5cf"/></linearGradient><radialGradient id="sun" cx="0.7" cy="0.25" r="0.5"><stop offset="0" stop-color="#f7d9c4"/><stop offset="1" stop-color="#f7d9c400"/></radialGradient></defs><rect width="800" height="600" fill="url(#ih)"/><rect width="800" height="600" fill="url(#sun)"/><g stroke="#a4586c" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"><path d="M400 470 C 400 380 400 330 400 300"/><path d="M400 330 C 340 320 320 260 350 210 C 395 245 405 290 400 330Z" fill="#e9c2c9" stroke="#a4586c"/><path d="M400 330 C 460 320 480 260 450 210 C 405 245 395 290 400 330Z" fill="#f2d7db" stroke="#a4586c"/><path d="M400 300 C 380 240 400 190 400 160 C 400 190 420 240 400 300Z" fill="#f7e3e6" stroke="#a4586c"/><ellipse cx="400" cy="480" rx="120" ry="14" fill="none" opacity=".5"/></g><g fill="#a4586c" opacity=".28"><circle cx="150" cy="130" r="5"/><circle cx="660" cy="440" r="7"/><circle cx="120" cy="420" r="4"/><circle cx="690" cy="150" r="4"/></g></svg></div>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <div class="metier">Institut de beauté</div>
+    <h1>Institut Éclat</h1>
+    <p class="tagline">Douze ans de gestes précis, de produits choisis et de clientes qui repartent plus légères. Bienvenue dans votre parenthèse.</p>
+    <a class="cta" href="tel:+3271000000">Réserver mon soin</a><a class="cta ghost" href="#carte">Découvrir les soins</a>
+    <span class="cta-sub">En ligne 24h/24 — bons cadeaux imprimables immédiatement</span>
+  </div>
 </header>
 <section>
-  <h2>Nos <span>prestations</span></h2>
-  <div class="carte"><div class="ligne"><span>Soin visage signature — 1h</span><span class="p">65 €</span></div><div class="ligne"><span>Épilation sourcils / lèvre</span><span class="p">dès 12 €</span></div><div class="ligne"><span>Pose gel & semi-permanent</span><span class="p">dès 40 €</span></div><div class="ligne"><span>Extensions de cils</span><span class="p">dès 70 €</span></div><div class="ligne"><span>Bon cadeau</span><span class="p">le montant de votre choix</span></div></div>
+  <div class="eyebrow">Notre histoire</div>
+  <h2>Camille, esthéticienne — et un peu confidente</h2>
+  <div class="story">
+    <div><p>J'ai ouvert l'institut avec une conviction simple : un soin réussi, c'est 50&nbsp;% de technique et 50&nbsp;% d'écoute. Ici, on prend le temps. Chaque rendez-vous commence par cinq minutes de conversation — votre peau, votre semaine, vos envies.</p>
+ <p>Je me forme chaque année (dermo-cosmétique, extensions de cils, techniques de massage) et je choisis mes produits un à un, en privilégiant les marques propres et les actifs naturels.</p>
+ <p>Ce que mes clientes disent le plus souvent en partant ? « J'aurais dû venir plus tôt. »</p><div class="sign">— Camille</div></div>
+    <div class="portrait"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="te9c2c9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9c2c9"/><stop offset="1" stop-color="#a4586c"/></linearGradient></defs><rect width="800" height="600" fill="url(#te9c2c9)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M280 400 C300 330 340 300 400 300 C460 300 500 330 520 400"/><circle cx="400" cy="230" r="46"/><path d="M370 235 q30 25 60 0"/></g></svg></div>
+  </div>
+</section>
+<section id="carte">
+  <div class="eyebrow">La carte des soins</div>
+  <h2>Des soins pensés, pas des formules</h2>
+  <p class="lead">Chaque soin est adapté à votre peau du jour. Première visite : le diagnostic est toujours offert.</p>
+  <div class="carte"><div class="ligne"><div class="top"><span>Soin visage signature — 1h de lâcher-prise</span><span class="p">65 €</span></div><div class="desc">Nettoyage, gommage, massage du visage et des trapèzes, masque sur mesure.</div></div><div class="ligne"><div class="top"><span>Extensions de cils — pose complète</span><span class="p">dès 70 €</span></div><div class="desc">Cil à cil ou volume russe. Retouches à 3 semaines : 35 €.</div></div><div class="ligne"><div class="top"><span>Beauté des mains & semi-permanent</span><span class="p">dès 40 €</span></div><div class="desc">Tenue 3 semaines garantie ou retouche offerte.</div></div><div class="ligne"><div class="top"><span>Épilations — visage & corps</span><span class="p">dès 12 €</span></div><div class="desc">Cire douce basse température, peaux sensibles bienvenues.</div></div><div class="ligne"><div class="top"><span>Bon cadeau</span><span class="p">le montant de votre choix</span></div><div class="desc">Commandé en ligne, imprimé en 2 minutes — le cadeau de dernière minute parfait.</div></div></div>
 </section>
 <section>
-  <div class="grid2">
+  <div class="eyebrow">En images</div>
+  <h2>L'institut en images</h2>
+  <p class="lead">Illustrations de démonstration — remplacées par les photos de VOTRE institut, vos cabines, vos réalisations.</p>
+  <div class="galerie"><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="tf2d7db" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2d7db"/><stop offset="1" stop-color="#c98a99"/></linearGradient></defs><rect width="800" height="600" fill="url(#tf2d7db)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M400 420 C360 340 380 260 400 200 C420 260 440 340 400 420Z"/><path d="M400 420 C330 400 290 340 290 280 C350 300 390 350 400 420Z"/><path d="M400 420 C470 400 510 340 510 280 C450 300 410 350 400 420Z"/></g></svg><div class="cap">L'espace soin</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="te9c2c9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9c2c9"/><stop offset="1" stop-color="#a4586c"/></linearGradient></defs><rect width="800" height="600" fill="url(#te9c2c9)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M280 400 C300 330 340 300 400 300 C460 300 500 330 520 400"/><circle cx="400" cy="230" r="46"/><path d="M370 235 q30 25 60 0"/></g></svg><div class="cap">Massages & modelages</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="tf7e3e6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7e3e6"/><stop offset="1" stop-color="#d8a3ae"/></linearGradient></defs><rect width="800" height="600" fill="url(#tf7e3e6)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M400 180 C330 280 320 360 400 420 C480 360 470 280 400 180Z"/><path d="M370 330 q10 40 45 45"/></g></svg><div class="cap">Soins visage</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="tdfb8c0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dfb8c0"/><stop offset="1" stop-color="#964f62"/></linearGradient></defs><rect width="800" height="600" fill="url(#tdfb8c0)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M400 420 C360 340 380 260 400 200 C420 260 440 340 400 420Z"/><path d="M400 420 C330 400 290 340 290 280 C350 300 390 350 400 420Z"/><path d="M400 420 C470 400 510 340 510 280 C450 300 410 350 400 420Z"/></g></svg><div class="cap">Extensions de cils</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="tf0cdd4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0cdd4"/><stop offset="1" stop-color="#b06b7c"/></linearGradient></defs><rect width="800" height="600" fill="url(#tf0cdd4)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M400 180 C330 280 320 360 400 420 C480 360 470 280 400 180Z"/><path d="M370 330 q10 40 45 45"/></g></svg><div class="cap">Onglerie</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="tecc5cd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ecc5cd"/><stop offset="1" stop-color="#a4586c"/></linearGradient></defs><rect width="800" height="600" fill="url(#tecc5cd)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"><path d="M280 400 C300 330 340 300 400 300 C460 300 500 330 520 400"/><circle cx="400" cy="230" r="46"/><path d="M370 235 q30 25 60 0"/></g></svg><div class="cap">L'accueil</div></div></div>
+</section>
+<section>
+  <div class="eyebrow">Pourquoi nous</div>
+  <h2>Ce qui fait la différence</h2>
+  <div class="trois"><div class="bloc"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="26" rx="4"/><path d="M8 20h32M18 12V8m12 4V8"/></svg></div><h3>Réservation en ligne 24h/24</h3><p>Votre créneau réservé à minuit si besoin — confirmation immédiate et rappel la veille.</p></div><div class="bloc"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-16-9-16-21a9 9 0 0116-6 9 9 0 0116 6c0 12-16 21-16 21z"/></svg></div><h3>Bons cadeaux en 2 minutes</h3><p>Commandés depuis ce site, imprimables immédiatement — l'institut tourne même pendant les congés.</p></div><div class="bloc"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36c2-10 8-16 12-16s10 6 12 16M24 20a6 6 0 100-12 6 6 0 000 12z"/></svg></div><h3>Toujours la même praticienne</h3><p>Camille vous suit de séance en séance : votre peau n'a pas à se raconter deux fois.</p></div></div>
+</section>
+<section>
+  <div class="eyebrow">Ils en parlent</div>
+  <h2>La meilleure publicité, <em>c'est vous</em></h2>
+  <div class="avisgrid"><div class="avis"><div class="et">★★★★★</div>« Des mains en or et un accueil adorable. Je ressors de chaque soin comme d'un week-end. »<span class="qui">— Sophie</span></div><div class="avis"><div class="et">★★★★★</div>« Bon cadeau commandé à 22h la veille de l'anniversaire de ma maman. Sauvée. »<span class="qui">— Laura</span></div><div class="avis"><div class="et">★★★★★</div>« Le diagnostic offert m'a évité d'acheter des produits inutiles. Rare, cette honnêteté. »<span class="qui">— Émilie</span></div></div>
+</section>
+<section class="faq">
+  <div class="eyebrow">Questions fréquentes</div>
+  <h2>Tout ce qu'on nous demande</h2>
+  <details><summary>Le diagnostic est-il vraiment gratuit ?</summary><div class="rep">Oui, systématiquement à la première visite — 15 minutes pour comprendre votre peau avant tout soin.</div></details><details><summary>Peut-on venir enceinte ?</summary><div class="rep">Bien sûr : plusieurs soins sont adaptés à la grossesse, signalez-le simplement à la réservation.</div></details><details><summary>Que se passe-t-il si j'annule ?</summary><div class="rep">Annulation gratuite jusqu'à 24h avant. Le créneau libéré profite à une autre cliente.</div></details><details><summary>Vendez-vous les produits utilisés en cabine ?</summary><div class="rep">Oui, mais uniquement sur conseil — jamais de vente forcée, promis.</div></details>
+</section>
+<section>
+  <div class="bandeau">
+    <h2>Offrez-vous une heure. Vous la méritez.</h2>
+    <p>Réservez en ligne en 30 secondes — ou offrez un bon cadeau à quelqu'un qui n'oserait pas se l'offrir.</p>
+    <a class="cta" href="tel:+3271000000">Réserver mon soin</a>
+  </div>
+</section>
+<section>
+  <div class="eyebrow">Infos pratiques</div>
+  <h2>Nous trouver, nous joindre</h2>
+  <div class="infos">
     <div class="bloc horaires">
-      <h2>Horaires <span>à jour</span></h2>
+      <h3>Horaires — toujours à jour</h3>
       <div><span>Lundi</span><span>Fermé</span></div>
       <div><span>Mardi — Vendredi</span><span class="ouv">9h00 – 18h00</span></div>
       <div><span>Samedi</span><span class="ouv">9h00 – 16h00</span></div>
       <div><span>Dimanche</span><span>Fermé</span></div>
-      <p style="margin-top:14px;font-size:.85rem;color:var(--muted)">Congés et fermetures exceptionnelles mis à jour en un message — vos clients ne se déplacent plus pour rien.</p>
+      <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Congés annoncés ici et sur Google — vos clients ne se déplacent plus pour rien.</p>
     </div>
-    <div class="bloc avis">
-      <h2>Ils en <span>parlent</span></h2>
-      <div class="etoiles">★★★★★</div>
-      <div class="a">« Des mains en or et un accueil adorable. Je n'irais nulle part ailleurs. »<span class="qui">— Sophie</span></div><div class="a">« J'ai offert un bon cadeau à ma maman — commandé en ligne en 2 minutes. »<span class="qui">— Laura</span></div>
-    </div>
+    <div class="map">🗺️ Carte Google Maps intégrée — itinéraire en un clic</div>
   </div>
-</section>
-<section>
-  <div class="extra">Vente de bons cadeaux en ligne : du chiffre d'affaires même pendant vos congés.</div>
-</section>
-<section>
-  <h2>Nous <span>trouver</span></h2>
-  <div class="map">🗺️ Carte Google Maps intégrée — itinéraire en un clic</div>
 </section>
 <footer>
   <b>Institut Éclat</b> · Rue de l'Exemple 1, 6000 Votre-Commune · 071 00 00 00<br>
-  Maquette de démonstration — <b>votre commerce peut avoir ce site en 7 jours.</b>
+  Maquette de démonstration — <b>votre commerce peut avoir ce site en 7 jours.</b><br>
+  <span style="font-size:.8rem">Textes et visuels d'illustration : ils seront remplacés par VOS contenus, VOS photos, VOS prix.</span>
 </footer>
-<div class="demo-badge">✨ MAQUETTE DÉMO — Votre commerce ici, en ligne en 7 jours · Jordan &amp; Justine · 0493 33 47 42</div>
-</body>
-</html>
+<div class="demo-badge">✨ MAQUETTE DÉMO — Votre commerce ici, en ligne en 7 jours · 0493 33 47 42 (Jordan) · 0494 58 63 55 (Justine)</div>
+</body></html>
