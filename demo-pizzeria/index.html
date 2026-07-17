@@ -146,6 +146,28 @@ h2 .rv-line{display:inline-block}
 .bigquote{font-family:'Fraunces',serif;font-size:clamp(1.6rem,5vw,2.6rem);line-height:1.25;letter-spacing:-.015em;max-width:820px}
 .bigquote em{font-style:normal;color:var(--accent)}
 @media(prefers-reduced-motion:reduce){.marquee .track{animation:none}.scrolldown::after{animation:none}h1 .w span{transform:none!important}.tuile img{scale:1}}
+
+/* ══ MISE EN SCÈNE PHOTO ══ */
+.tuile img,.fullbleed img,.portrait img{filter:saturate(1.1) contrast(1.06)}
+.breakout{width:100vw;margin-left:calc(50% - 50vw)}
+.fullbleed{position:relative;height:88vh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.fullbleed img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.fullbleed::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,.55) 100%)}
+.fullbleed .line{position:relative;z-index:2;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:clamp(1.9rem,6.5vw,4.2rem);text-align:center;letter-spacing:-.02em;line-height:1.1;padding:0 24px;text-shadow:0 4px 40px rgba(0,0,0,.6);max-width:900px}
+.fullbleed .line em{font-style:italic;color:var(--accent)}
+.edito{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:start}
+.edito .ph{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 30px 70px -30px rgba(0,0,0,.55)}
+.edito .ph img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;scale:1.12}
+.edito .ph .num{position:absolute;top:16px;left:18px;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1rem;opacity:.85;text-shadow:0 2px 12px rgba(0,0,0,.6);letter-spacing:.08em}
+.edito .leg{font-family:'Fraunces',serif;font-size:1.15rem;margin-top:14px;letter-spacing:-.01em}
+.edito .sous{color:var(--muted);font-size:.88rem;margin-top:4px}
+.edito .c1{grid-column:1/8;aspect-ratio:4/3}
+.edito .c2{grid-column:8/13;aspect-ratio:4/5;margin-top:12vh}
+.edito .c3{grid-column:1/6;aspect-ratio:4/5;margin-top:-6vh}
+.edito .c4{grid-column:6/13;aspect-ratio:16/10;margin-top:8vh}
+@media(max-width:760px){.edito{gap:26px}.edito .c1,.edito .c2,.edito .c3,.edito .c4{grid-column:1/13;margin-top:0;aspect-ratio:4/3}}
+.rvimg{clip-path:inset(14% 14% 14% 14% round 16px)}
+html.nojs .rvimg,body:not(.gsapok) .rvimg{clip-path:none}
 </style>
 </head><body>
 <div class="progress" id="prg"></div>
@@ -184,6 +206,7 @@ h2 .rv-line{display:inline-block}
   </div>
   <p class="bigquote" style="margin:64px auto 0;text-align:center">« On aurait pu acheter un four électrique. <em>Mais alors ça ne serait plus notre pizza.</em> »</p>
 </section>
+<div class="breakout fullbleed"><img src="/_photos/pizzeria/g1.jpg" alt="" data-fb loading="lazy" decoding="async"><div class="line">Le feu <em>ne ment</em> jamais.</div></div>
 <section id="carte">
   <div class="eyebrow">La carte</div>
   <h2>Nos pizzas, cuites au feu de bois</h2>
@@ -192,9 +215,14 @@ h2 .rv-line{display:inline-block}
 </section>
 <section>
   <div class="eyebrow">En images</div>
-  <h2>Le four, la pâte, le résultat</h2>
-  <p class="lead">Photos d'illustration — sur VOTRE site : votre four, vos pizzas, votre pizzaiolo au travail. C'est ça qui donne faim.</p>
-  <div class="galerie"><div class="tuile"><img src="/_photos/pizzeria/g1.jpg" alt="Le four à bois, 430°" loading="lazy" decoding="async"><div class="cap">Le four à bois, 430°</div></div><div class="tuile"><img src="/_photos/pizzeria/g2.jpg" alt="Le fromage qui file" loading="lazy" decoding="async"><div class="cap">Le fromage qui file</div></div><div class="tuile"><img src="/_photos/pizzeria/g3.jpg" alt="Prête à emporter" loading="lazy" decoding="async"><div class="cap">Prête à emporter</div></div><div class="tuile"><img src="/_photos/pizzeria/g4.jpg" alt="Le bord alvéolé" loading="lazy" decoding="async"><div class="cap">Le bord alvéolé</div></div><div class="tuile"><img src="/_photos/pizzeria/g5.jpg" alt="Généreuse, toujours" loading="lazy" decoding="async"><div class="cap">Généreuse, toujours</div></div><div class="tuile"><img src="/_photos/pizzeria/g6.jpg" alt="90 secondes chrono" loading="lazy" decoding="async"><div class="cap">90 secondes chrono</div></div></div>
+  <h2>Le feu, la pâte, <em>le geste</em></h2>
+  <p class="lead">Photos d'illustration — sur VOTRE site : votre four, vos pizzas, votre pizzaiolo. C'est ça qui donne faim.</p>
+  <div class="edito">
+    <div class="c1"><div class="ph rvimg"><img src="/_photos/pizzeria/g2.jpg" alt="Le fromage qui file" loading="lazy" decoding="async"><span class="num">01</span></div><div class="leg">Le fromage qui file</div><div class="sous">Fior di latte, jamais autre chose.</div></div>
+    <div class="c2"><div class="ph rvimg"><img src="/_photos/pizzeria/g4.jpg" alt="Le bord alvéolé" loading="lazy" decoding="async"><span class="num">02</span></div><div class="leg">Le bord alvéolé</div><div class="sous">La signature des 48 heures de maturation.</div></div>
+    <div class="c3"><div class="ph rvimg"><img src="/_photos/pizzeria/g3.jpg" alt="Prête à emporter" loading="lazy" decoding="async"><span class="num">03</span></div><div class="leg">Prête à emporter</div><div class="sous">Encore brûlante — dix minutes chrono jusque chez vous.</div></div>
+    <div class="c4"><div class="ph rvimg"><img src="/_photos/pizzeria/g6.jpg" alt="Le four" loading="lazy" decoding="async"><span class="num">04</span></div><div class="leg">La bouche du four</div><div class="sous">430 degrés. Le seul thermostat, c'est l'œil du pizzaiolo.</div></div>
+  </div>
 </section>
 <section>
   <div class="eyebrow">Pourquoi nous</div>
@@ -206,6 +234,7 @@ h2 .rv-line{display:inline-block}
   <h2>La meilleure publicité, <em>c'est vous</em></h2>
   <div class="avisgrid"><div class="avis"><div class="et">★★★★★</div>« La meilleure pâte de la région, et de loin. On sent les 48 heures. »<span class="qui">— Antonio</span></div><div class="avis"><div class="et">★★★★★</div>« Commandé par téléphone en regardant la carte du site, prête en 20 min, encore brûlante. »<span class="qui">— Céline</span></div><div class="avis"><div class="et">★★★★★</div>« Mes gosses ne veulent plus de pizza surgelée. Merci, sincèrement. Ou pas. »<span class="qui">— Fabrice</span></div></div>
 </section>
+<div class="breakout fullbleed"><img src="/_photos/pizzeria/g5.jpg" alt="" data-fb loading="lazy" decoding="async"><div class="line">Quatre-vingt-dix secondes.<br><em>Pas une de plus.</em></div></div>
 <section class="faq">
   <div class="eyebrow">Questions fréquentes</div>
   <h2>Tout ce qu'on nous demande</h2>
@@ -268,6 +297,25 @@ if (window.gsap && !_rm) {
     gsap.to(obj, {v:end, duration:1.6, ease:'power2.out',
       scrollTrigger:{trigger:el, start:'top 85%'},
       onUpdate(){ el.firstChild.textContent = Math.round(obj.v); }});
+  });
+
+  document.body.classList.add('gsapok');
+  // Révélation cinématique des photos édito
+  document.querySelectorAll('.rvimg').forEach(el => {
+    gsap.to(el, {clipPath:'inset(0% 0% 0% 0% round 16px)', ease:'none',
+      scrollTrigger:{trigger:el, start:'top 88%', end:'top 40%', scrub:.5}});
+    const img = el.querySelector('img');
+    gsap.fromTo(img, {yPercent:-6, scale:1.18}, {yPercent:6, scale:1.08, ease:'none',
+      scrollTrigger:{trigger:el, start:'top bottom', end:'bottom top', scrub:.4}});
+  });
+  // Plein écran : parallaxe profonde + texte qui respire
+  document.querySelectorAll('[data-fb]').forEach(img => {
+    gsap.fromTo(img, {yPercent:-10}, {yPercent:10, ease:'none',
+      scrollTrigger:{trigger:img.parentElement, start:'top bottom', end:'bottom top', scrub:.3}});
+  });
+  document.querySelectorAll('.fullbleed .line').forEach(l => {
+    gsap.from(l, {scale:.85, opacity:0, letterSpacing:'.08em', duration:1.2, ease:'power3.out',
+      scrollTrigger:{trigger:l, start:'top 75%'}});
   });
   // Hero qui s'estompe légèrement au scroll (profondeur)
   gsap.to('.hero-inner', {yPercent:18, opacity:.25, ease:'none',
