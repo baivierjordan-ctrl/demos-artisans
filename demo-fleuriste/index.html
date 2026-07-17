@@ -74,15 +74,22 @@ h2 em{font-style:normal;color:var(--accent)}
 .map{background:var(--panel);border-radius:16px;height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted);border:1px dashed color-mix(in srgb, var(--muted) 40%, transparent)}
 footer{text-align:center;padding:50px 24px 96px;color:var(--muted);font-size:.9rem}
 footer b{color:var(--text)}
+
+.hero-media img{animation:kb 22s ease-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+
+.hero-media img{animation:kb 22s ease-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero-veil{background:linear-gradient(to top, var(--bg) 6%, color-mix(in srgb, var(--bg) 78%, transparent) 44%, color-mix(in srgb, var(--bg) 20%, transparent) 100%)}
 </style>
 </head><body>
 <header>
-  <div class="hero-media"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef2e6"/><stop offset="1" stop-color="#dfe8d5"/></linearGradient></defs><rect width="800" height="600" fill="url(#fh)"/><g stroke="#3f6b4f" stroke-width="4" fill="none" stroke-linecap="round"><path d="M400 560 V 320"/><path d="M400 430 C 350 420 330 380 335 340 C 375 355 395 390 400 430"/><path d="M400 470 C 455 460 480 420 475 380 C 430 395 405 430 400 470"/><circle cx="400" cy="280" r="38" fill="#e8b4bc"/><circle cx="400" cy="280" r="14" fill="#c9576b"/><g fill="#e8b4bc"><ellipse cx="360" cy="255" rx="20" ry="30" transform="rotate(-30 360 255)"/><ellipse cx="440" cy="255" rx="20" ry="30" transform="rotate(30 440 255)"/><ellipse cx="365" cy="310" rx="20" ry="30" transform="rotate(-115 365 310)"/><ellipse cx="435" cy="310" rx="20" ry="30" transform="rotate(115 435 310)"/></g><path d="M310 560 V 380 M310 450 C 275 440 260 405 265 375 C 297 388 308 418 310 450" /><circle cx="310" cy="345" r="24" fill="#f2d06b"/><circle cx="310" cy="345" r="9" fill="#b98b1e"/><path d="M490 560 V 400 M490 470 C 525 460 540 425 535 395 C 503 408 492 438 490 470"/><circle cx="490" cy="365" r="26" fill="#c9a7d8"/><circle cx="490" cy="365" r="10" fill="#7d5a91"/></g><ellipse cx="400" cy="565" rx="180" ry="16" fill="#3f6b4f" opacity=".15"/></svg></div>
+  <div class="hero-media"><img src="/_photos/fleuriste/hero.jpg" alt="Maison Pétale"></div>
   <div class="hero-veil"></div>
   <div class="hero-inner">
     <div class="metier">Artisan fleuriste</div>
     <h1>Maison Pétale</h1>
-    <p class="tagline">Des fleurs fraîches du marché, composées ici le matin même — et commandées directement chez nous, sans intermédiaire qui prend sa part.</p>
+    <p class="tagline">Des fleurs choisies au marché chaque matin, composées ici, à la main — et commandées directement chez nous, sans intermédiaire qui prend sa part.</p>
     <a class="cta" href="tel:+3271000000">Commander directement</a><a class="cta ghost" href="#carte">Voir nos créations</a>
     <span class="cta-sub">Par téléphone ou en ligne — 0 % de commission, 100 % pour votre fleuriste</span>
   </div>
@@ -91,23 +98,23 @@ footer b{color:var(--text)}
   <div class="eyebrow">Notre histoire</div>
   <h2>Trois générations de mains vertes</h2>
   <div class="story">
-    <div><p>Ma grand-mère a ouvert la boutique. Ma mère m'a appris à monter un bouquet avant de savoir écrire. Aujourd'hui c'est moi qui ouvre le rideau à 7h, après le passage au marché aux fleurs — parce qu'une fleur fraîche, ça se choisit à l'œil et au toucher, pas sur catalogue.</p>
- <p>Chaque composition qui sort d'ici est unique. Pas de bouquet standardisé assemblé à 200 km : ce que vous voyez en photo sur ce site, c'est ce qui sort de NOTRE atelier.</p>
+    <div><p>Ma grand-mère a ouvert la boutique. Ma mère m'a appris à monter un bouquet avant que je sache écrire. Aujourd'hui c'est moi qui lève le rideau à 7h, après le passage au marché aux fleurs — parce qu'une fleur fraîche, ça se choisit à l'œil et au toucher, jamais sur catalogue.</p>
+ <p>Chaque composition qui sort d'ici est unique. Pas de bouquet standardisé assemblé à deux cents kilomètres : ce que vous voyez en photo sur ce site, c'est ce qui sort de NOTRE atelier, le jour même.</p>
  <p>Et quand vous commandez en direct, chaque euro rémunère ce travail — pas la commission d'une plateforme.</p><div class="sign">— Votre fleuriste, depuis 1962</div></div>
-    <div class="portrait"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fe8b4bc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dfe8d5"/><stop offset="1" stop-color="#3f6b4f"/></linearGradient></defs><rect width="800" height="600" fill="url(#fe8b4bc)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#e8b4bc" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#c9576b" stroke="none"/></g></svg></div>
+    <div class="portrait"><img src="/_photos/fleuriste/portrait.jpg" alt="L'atelier de composition"></div>
   </div>
 </section>
 <section id="carte">
   <div class="eyebrow">Nos créations & services</div>
   <h2>Du bouquet du jour au plus grand jour</h2>
-  <p class="lead">Tout est composé sur place, avec les fleurs de la semaine. Les prix ci-dessous sont indicatifs — dites-nous votre budget, on fait le reste.</p>
-  <div class="carte"><div class="ligne"><div class="top"><span>Bouquet du jour — la fraîcheur du marché</span><span class="p">dès 25 €</span></div><div class="desc">Composé le matin même. Dites-nous l'occasion et les couleurs préférées.</div></div><div class="ligne"><div class="top"><span>Mariage — de la boutonnière à la voiture</span><span class="p">sur devis</span></div><div class="desc">Rencontre offerte, moodboard, essai du bouquet de mariée. On s'occupe de tout le jour J.</div></div><div class="ligne"><div class="top"><span>Deuil — gerbes, coussins, dernières attentions</span><span class="p">dès 45 €</span></div><div class="desc">Avec la délicatesse qui s'impose. Livraison directe au funérarium possible.</div></div><div class="ligne"><div class="top"><span>Abonnement bouquet — chaque semaine chez vous</span><span class="p">dès 18 €/sem</span></div><div class="desc">Pour vous ou pour offrir. Pause ou arrêt en un simple message.</div></div><div class="ligne"><div class="top"><span>Livraison locale le jour même</span><span class="p">offerte dès 40 €</span></div><div class="desc">Commandé avant 14h, livré avant 18h dans un rayon de 15 km.</div></div></div>
+  <p class="lead">Tout est composé sur place, avec les fleurs de la semaine. Les prix sont indicatifs — dites-nous votre budget et l'occasion, on fait le reste.</p>
+  <div class="carte"><div class="ligne"><div class="top"><span>Bouquet du jour — la fraîcheur du marché</span><span class="p">dès 25 €</span></div><div class="desc">Composé le matin même. Dites-nous l'occasion et les couleurs préférées, on s'occupe du reste.</div></div><div class="ligne"><div class="top"><span>La rose à l'unité — ou les douze</span><span class="p">dès 3,50 €</span></div><div class="desc">Rouge, blanche, pastel. Emballage soigné offert, message manuscrit inclus.</div></div><div class="ligne"><div class="top"><span>Mariage — de la boutonnière à la voiture</span><span class="p">sur devis</span></div><div class="desc">Rencontre offerte, moodboard, essai du bouquet de mariée. On s'occupe de tout le jour J.</div></div><div class="ligne"><div class="top"><span>Deuil — gerbes, coussins, dernières attentions</span><span class="p">dès 45 €</span></div><div class="desc">Avec la délicatesse qui s'impose. Livraison directe au funérarium, votre carte manuscrite jointe.</div></div><div class="ligne"><div class="top"><span>Abonnement bouquet — chaque semaine chez vous</span><span class="p">dès 18 €/sem</span></div><div class="desc">Pour vous ou pour offrir. Pause ou arrêt en un simple message.</div></div><div class="ligne"><div class="top"><span>Livraison locale le jour même</span><span class="p">offerte dès 40 €</span></div><div class="desc">Commandé avant 14h, livré avant 18h dans un rayon de 15 km.</div></div></div>
 </section>
 <section>
   <div class="eyebrow">En images</div>
   <h2>L'atelier et les saisons</h2>
-  <p class="lead">Illustrations de démonstration — sur VOTRE site, ce seront les photos de vos vraies compositions, mises à jour au fil des saisons.</p>
-  <div class="galerie"><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fe8b4bc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8f0e0"/><stop offset="1" stop-color="#4f7d5f"/></linearGradient></defs><rect width="800" height="600" fill="url(#fe8b4bc)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#e8b4bc" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#c9576b" stroke="none"/></g></svg><div class="cap">Bouquets du jour</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ff2d06b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3ead8"/><stop offset="1" stop-color="#b98b1e"/></linearGradient></defs><rect width="800" height="600" fill="url(#ff2d06b)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#f2d06b" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#b98b1e" stroke="none"/></g></svg><div class="cap">Compositions de saison</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fc9a7d8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9e2f0"/><stop offset="1" stop-color="#7d5a91"/></linearGradient></defs><rect width="800" height="600" fill="url(#fc9a7d8)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#c9a7d8" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#7d5a91" stroke="none"/></g></svg><div class="cap">Mariages</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fffffff" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3ece6"/><stop offset="1" stop-color="#3f6b4f"/></linearGradient></defs><rect width="800" height="600" fill="url(#fffffff)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#ffffff" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#9db8a5" stroke="none"/></g></svg><div class="cap">Deuil & hommages</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fe8a49c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0e6e0"/><stop offset="1" stop-color="#a5605a"/></linearGradient></defs><rect width="800" height="600" fill="url(#fe8a49c)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#e8a49c" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#a5605a" stroke="none"/></g></svg><div class="cap">Plantes & orchidées</div></div><div class="tuile"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fe8b4bc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5efe9"/><stop offset="1" stop-color="#2c4d38"/></linearGradient></defs><rect width="800" height="600" fill="url(#fe8b4bc)"/><g stroke="#ffffff" stroke-width="5" fill="none" opacity=".75" stroke-linecap="round"><path d="M400 480 V 300 M400 390 C 350 380 330 340 335 305 C 372 318 393 352 400 390"/><circle cx="400" cy="255" r="42" fill="#e8b4bc" stroke="#ffffff"/><circle cx="400" cy="255" r="15" fill="#c9576b" stroke="none"/></g></svg><div class="cap">L'atelier</div></div></div>
+  <p class="lead">Photos d'illustration — sur VOTRE site, ce seront vos vraies compositions, photographiées ici, mises à jour au fil des saisons. C'est précisément ce qu'aucune plateforme ne montre.</p>
+  <div class="galerie"><div class="tuile"><img src="/_photos/fleuriste/g1.jpg" alt="Bouquets du jour" loading="lazy"><div class="cap">Bouquets du jour</div></div><div class="tuile"><img src="/_photos/fleuriste/g2.jpg" alt="Mariages & cérémonies" loading="lazy"><div class="cap">Mariages & cérémonies</div></div><div class="tuile"><img src="/_photos/fleuriste/g3.jpg" alt="La rose, toujours" loading="lazy"><div class="cap">La rose, toujours</div></div><div class="tuile"><img src="/_photos/fleuriste/g4.jpg" alt="La boutique" loading="lazy"><div class="cap">La boutique</div></div><div class="tuile"><img src="/_photos/fleuriste/g5.jpg" alt="La devanture, chaque matin" loading="lazy"><div class="cap">La devanture, chaque matin</div></div><div class="tuile"><img src="/_photos/fleuriste/g6.jpg" alt="L'atelier de composition" loading="lazy"><div class="cap">L'atelier de composition</div></div></div>
 </section>
 <section>
   <div class="eyebrow">Pourquoi nous</div>
@@ -117,12 +124,12 @@ footer b{color:var(--text)}
 <section>
   <div class="eyebrow">Ils en parlent</div>
   <h2>La meilleure publicité, <em>c'est vous</em></h2>
-  <div class="avisgrid"><div class="avis"><div class="et">★★★★★</div>« Commandé à 9h par téléphone après avoir vu le site, livré à 14h. Ma mère a pleuré de joie. »<span class="qui">— Nathalie</span></div><div class="avis"><div class="et">★★★★★</div>« Les photos du site sont les VRAIES compositions de la boutique. Ça change tout des plateformes. »<span class="qui">— Marc</span></div><div class="avis"><div class="et">★★★★★</div>« Pour notre mariage, elle a tout géré. Le bouquet d'essai m'a convaincue en 5 minutes. »<span class="qui">— Charlotte & Théo</span></div></div>
+  <div class="avisgrid"><div class="avis"><div class="et">★★★★★</div>« Commandé à 9h par téléphone après avoir vu le site, livré à 14h. Ma mère a pleuré de joie. »<span class="qui">— Nathalie</span></div><div class="avis"><div class="et">★★★★★</div>« Les photos du site sont les VRAIES compositions de la boutique. Ça change tout des plateformes. »<span class="qui">— Marc</span></div><div class="avis"><div class="et">★★★★★</div>« Pour notre mariage, elle a tout géré. Le bouquet d'essai m'a convaincue en cinq minutes. »<span class="qui">— Charlotte & Théo</span></div></div>
 </section>
 <section class="faq">
   <div class="eyebrow">Questions fréquentes</div>
   <h2>Tout ce qu'on nous demande</h2>
-  <details><summary>Puis-je commander pour le jour même ?</summary><div class="rep">Oui : avant 14h par téléphone, livraison avant 18h dans un rayon de 15 km. Après 14h, appelez quand même — on fait souvent des miracles.</div></details><details><summary>Comment choisir si je n'y connais rien ?</summary><div class="rep">Donnez-nous trois choses : l'occasion, le budget, et une couleur que la personne aime. On s'occupe du reste.</div></details><details><summary>Livrez-vous au funérarium ?</summary><div class="rep">Oui, directement, avec votre carte manuscrite. Vous n'avez pas à vous déplacer si c'est trop difficile.</div></details><details><summary>Pourquoi ne pas passer par Florajet/Interflora ?</summary><div class="rep">Vous pouvez ! Mais en direct, la commission de la plateforme (jusqu'à 25 %) se retrouve... dans votre bouquet.</div></details>
+  <details><summary>Puis-je commander pour le jour même ?</summary><div class="rep">Oui : avant 14h par téléphone, livraison avant 18h dans un rayon de 15 km. Après 14h, appelez quand même — on fait souvent des miracles.</div></details><details><summary>Comment choisir si je n'y connais rien ?</summary><div class="rep">Donnez-nous trois choses : l'occasion, le budget, et une couleur que la personne aime. On s'occupe du reste, c'est notre métier.</div></details><details><summary>Livrez-vous au funérarium ?</summary><div class="rep">Oui, directement, avec votre carte manuscrite. Vous n'avez pas à vous déplacer si c'est trop difficile.</div></details><details><summary>Pourquoi ne pas passer par Florajet ou Interflora ?</summary><div class="rep">Vous pouvez ! Mais en direct, la commission de la plateforme (jusqu'à 25 %) se retrouve... dans votre bouquet.</div></details>
 </section>
 <section>
   <div class="bandeau">
@@ -138,18 +145,18 @@ footer b{color:var(--text)}
     <div class="bloc horaires">
       <h3>Horaires — toujours à jour</h3>
       <div><span>Lundi</span><span>Fermé</span></div>
-      <div><span>Mardi — Vendredi</span><span class="ouv">9h00 – 18h00</span></div>
-      <div><span>Samedi</span><span class="ouv">9h00 – 16h00</span></div>
-      <div><span>Dimanche</span><span>Fermé</span></div>
-      <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Congés annoncés ici et sur Google — vos clients ne se déplacent plus pour rien.</p>
+      <div><span>Mardi — Vendredi</span><span class="ouv">8h30 – 18h30</span></div>
+      <div><span>Samedi</span><span class="ouv">8h00 – 18h00</span></div>
+      <div><span>Dimanche</span><span class="ouv">9h00 – 13h00</span></div>
+      <p style="margin-top:12px;font-size:.85rem;color:var(--muted)">Fête des mères, Toussaint, Saint-Valentin : horaires exceptionnels annoncés ici et sur Google.</p>
     </div>
     <div class="map">🗺️ Carte Google Maps intégrée — itinéraire en un clic</div>
   </div>
 </section>
 <footer>
   <b>Maison Pétale</b> · Rue de l'Exemple 1, 6000 Votre-Commune · 071 00 00 00<br>
-  Maquette de démonstration — <b>votre commerce peut avoir ce site en 7 jours.</b><br>
-  <span style="font-size:.8rem">Textes et visuels d'illustration : ils seront remplacés par VOS contenus, VOS photos, VOS prix.</span>
+  Maquette de démonstration — <b>votre boutique peut avoir ce site en 7 jours.</b><br>
+  <span style="font-size:.8rem">Textes et photos d'illustration : ils seront remplacés par VOS contenus, VOS photos, VOS prix.</span>
 </footer>
-<div class="demo-badge">✨ MAQUETTE DÉMO — Votre commerce ici, en ligne en 7 jours · 0493 33 47 42 (Jordan) · 0494 58 63 55 (Justine)</div>
+<div class="demo-badge">✨ MAQUETTE DÉMO — Votre boutique ici, en ligne en 7 jours · 0493 33 47 42 (Jordan) · 0494 58 63 55 (Justine)</div>
 </body></html>
