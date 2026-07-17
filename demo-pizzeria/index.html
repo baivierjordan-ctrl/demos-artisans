@@ -168,12 +168,27 @@ h2 .rv-line{display:inline-block}
 @media(max-width:760px){.edito{gap:26px}.edito .c1,.edito .c2,.edito .c3,.edito .c4{grid-column:1/13;margin-top:0;aspect-ratio:4/3}}
 .rvimg{clip-path:inset(14% 14% 14% 14% round 16px)}
 html.nojs .rvimg,body:not(.gsapok) .rvimg{clip-path:none}
+
+/* ══ VIE ══ */
+#embers{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-inner{will-change:transform}
+@media(pointer:fine){
+ body{cursor:none}
+ a,button,summary{cursor:none}
+ .cur{position:fixed;top:0;left:0;z-index:200;pointer-events:none;mix-blend-mode:difference}
+ .cur-dot{width:8px;height:8px;background:#fff;border-radius:50%;transform:translate(-50%,-50%)}
+ .cur-ring{position:fixed;top:0;left:0;width:38px;height:38px;border:1.5px solid #fff;border-radius:50%;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .25s;z-index:199;pointer-events:none;mix-blend-mode:difference}
+ body.hovering .cur-ring{width:64px;height:64px;opacity:.9}
+}
+.edito .ph{transform-style:preserve-3d;transition:transform .35s ease}
+@media(prefers-reduced-motion:reduce){#embers{display:none}body{cursor:auto}.cur,.cur-ring{display:none}}
 </style>
 </head><body>
 <div class="progress" id="prg"></div>
+<div class="cur"><div class="cur-dot"></div></div><div class="cur-ring"></div>
 <div class="grain"></div>
 <header>
-  <div class="hero-media"><img src="/_photos/pizzeria/hero.jpg" fetchpriority="high" decoding="async" alt="Pizzeria Vesuvio"></div>
+  <canvas id="embers"></canvas><div class="hero-media"><img src="/_photos/pizzeria/hero.jpg" fetchpriority="high" decoding="async" alt="Pizzeria Vesuvio"></div>
   <div class="hero-veil"></div>
   <div class="hero-inner">
     <div class="metier">Pizzeria — four à bois</div>
@@ -300,6 +315,52 @@ if (window.gsap && !_rm) {
   });
 
   document.body.classList.add('gsapok');
+
+  // ── Braises montantes (canvas léger) ──
+  const cv = document.getElementById('embers');
+  if (cv) {
+    const ctx = cv.getContext('2d'); let W2, H2, parts = [];
+    const resize = () => { W2 = cv.width = cv.offsetWidth; H2 = cv.height = cv.offsetHeight; };
+    resize(); addEventListener('resize', resize);
+    const N = Math.min(46, Math.floor(W2/22));
+    for (let i=0;i<N;i++) parts.push({x:Math.random()*1, y:Math.random()*1, s:.6+Math.random()*2.1, v:.0006+Math.random()*.0016, o:.15+Math.random()*.5, w:.4+Math.random()*1.2, ph:Math.random()*6.28});
+    (function tick(t){
+      ctx.clearRect(0,0,W2,H2);
+      for (const p of parts) {
+        p.y -= p.v; if (p.y < -0.05) { p.y = 1.05; p.x = Math.random(); }
+        const x = p.x*W2 + Math.sin(t*.001*p.w + p.ph)*14;
+        const y = p.y*H2;
+        const g = ctx.createRadialGradient(x,y,0,x,y,p.s*3.2);
+        g.addColorStop(0, `rgba(255,176,88,${p.o})`); g.addColorStop(1,'rgba(255,120,40,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x,y,p.s*3.2,0,6.28); ctx.fill();
+      }
+      requestAnimationFrame(tick);
+    })(0);
+  }
+  // ── Curseur vivant + boutons magnétiques (desktop) ──
+  if (matchMedia('(pointer:fine)').matches) {
+    const dot = document.querySelector('.cur'), ring = document.querySelector('.cur-ring');
+    let mx=innerWidth/2, my=innerHeight/2, rx=mx, ry=my;
+    addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; dot.style.transform=`translate(${mx}px,${my}px)`; });
+    (function follow(){ rx+=(mx-rx)*.16; ry+=(my-ry)*.16; ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`; requestAnimationFrame(follow); })();
+    document.querySelectorAll('a,button,summary').forEach(el=>{
+      el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
+      el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
+    });
+    document.querySelectorAll('.cta').forEach(b=>{
+      b.addEventListener('mousemove', e=>{ const r=b.getBoundingClientRect();
+        gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.22, y:(e.clientY-r.top-r.height/2)*.32, duration:.4}); });
+      b.addEventListener('mouseleave', ()=>gsap.to(b,{x:0,y:0,duration:.5,ease:'elastic.out(1,.45)'}));
+    });
+    // Inclinaison 3D des photos édito au survol
+    document.querySelectorAll('.edito .ph').forEach(ph=>{
+      ph.addEventListener('mousemove', e=>{ const r=ph.getBoundingClientRect();
+        const px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+        ph.style.transform=`perspective(900px) rotateY(${px*7}deg) rotateX(${-py*7}deg) scale(1.015)`; });
+      ph.addEventListener('mouseleave', ()=>{ ph.style.transform='perspective(900px) rotateY(0) rotateX(0) scale(1)'; });
+    });
+  }
+
   // Révélation cinématique des photos édito
   document.querySelectorAll('.rvimg').forEach(el => {
     gsap.to(el, {clipPath:'inset(0% 0% 0% 0% round 16px)', ease:'none',
