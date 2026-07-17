@@ -113,6 +113,13 @@ section{padding:84px 24px}
 html.js section{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
 html.js section.vu{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.hero-media img{animation:none}html.js section{opacity:1;transform:none;transition:none}.cta,.bloc,.ligne{transition:none}}
+
+/* ══ LISIBILITÉ HERO ══ */
+.hero-veil{background:linear-gradient(to top, var(--bg) 22%, color-mix(in srgb, var(--bg) 86%, transparent) 52%, color-mix(in srgb, var(--bg) 34%, transparent) 82%, color-mix(in srgb, var(--bg) 12%, transparent) 100%)}
+header .metier{color:var(--accent);font-weight:700;text-shadow:0 1px 14px color-mix(in srgb, var(--bg) 80%, transparent)}
+header .tagline{color:color-mix(in srgb, var(--text) 88%, var(--muted));font-weight:500;text-shadow:0 1px 18px color-mix(in srgb, var(--bg) 85%, transparent)}
+header .cta-sub{color:color-mix(in srgb, var(--text) 72%, var(--muted));font-weight:500;text-shadow:0 1px 14px color-mix(in srgb, var(--bg) 85%, transparent)}
+.cta.ghost{background:color-mix(in srgb, var(--bg) 55%, transparent);backdrop-filter:blur(6px);border-color:color-mix(in srgb, var(--text) 35%, transparent)}
 </style>
 </head><body>
 <header>
