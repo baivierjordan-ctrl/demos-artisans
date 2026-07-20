@@ -170,7 +170,9 @@ h2 .rv-line{display:inline-block}
 html.nojs .rvimg,body:not(.gsapok) .rvimg{clip-path:none}
 
 /* ══ VIE ══ */
-#embers{position:absolute;inset:0;z-index:1;pointer-events:none}
+#embers{position:fixed;inset:0;z-index:0;pointer-events:none}
+header,section,footer,.marquee,.fullbleed{position:relative;z-index:1}
+.fullbleed{z-index:1}
 .hero-inner{will-change:transform}
 @media(pointer:fine){
  body{cursor:none}
@@ -186,9 +188,10 @@ html.nojs .rvimg,body:not(.gsapok) .rvimg{clip-path:none}
 </head><body>
 <div class="progress" id="prg"></div>
 <div class="cur"><div class="cur-dot"></div></div><div class="cur-ring"></div>
+<canvas id="embers"></canvas>
 <div class="grain"></div>
 <header>
-  <canvas id="embers"></canvas><div class="hero-media"><img src="/_photos/pizzeria/hero.jpg" fetchpriority="high" decoding="async" alt="Pizzeria Vesuvio"></div>
+  <div class="hero-media"><img src="/_photos/pizzeria/hero.jpg" fetchpriority="high" decoding="async" alt="Pizzeria Vesuvio"></div>
   <div class="hero-veil"></div>
   <div class="hero-inner">
     <div class="metier">Pizzeria — four à bois</div>
@@ -322,8 +325,8 @@ if (window.gsap && !_rm) {
     const ctx = cv.getContext('2d'); let W2, H2, parts = [];
     const resize = () => { W2 = cv.width = cv.offsetWidth; H2 = cv.height = cv.offsetHeight; };
     resize(); addEventListener('resize', resize);
-    const N = Math.min(46, Math.floor(W2/22));
-    for (let i=0;i<N;i++) parts.push({x:Math.random()*1, y:Math.random()*1, s:.6+Math.random()*2.1, v:.0006+Math.random()*.0016, o:.15+Math.random()*.5, w:.4+Math.random()*1.2, ph:Math.random()*6.28});
+    const N = Math.min(70, Math.floor(W2/16));
+    for (let i=0;i<N;i++) parts.push({x:Math.random()*1, y:Math.random()*1, s:.6+Math.random()*2.1, v:.0004+Math.random()*.0011, o:.10+Math.random()*.34, w:.4+Math.random()*1.2, ph:Math.random()*6.28});
     (function tick(t){
       ctx.clearRect(0,0,W2,H2);
       for (const p of parts) {
