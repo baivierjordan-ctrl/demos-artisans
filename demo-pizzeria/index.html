@@ -300,8 +300,8 @@ if (window.gsap && !_rm) {
   gsap.to('#prg', {width:'100%', ease:'none', scrollTrigger:{start:0, end:'max', scrub:.3}});
   // Révélation des sections
   document.querySelectorAll('section').forEach(s => {
-    gsap.from(s.children, {y:36, opacity:0, duration:.9, ease:'power3.out', stagger:.08,
-      scrollTrigger:{trigger:s, start:'top 78%'}});
+    gsap.from(s.children, {y:36, opacity:0, duration:.9, ease:'power3.out', stagger:.08, clearProps:'opacity,transform',
+      scrollTrigger:{trigger:s, start:'top 92%', once:true}});
   });
   // Parallaxe galerie + portrait
   document.querySelectorAll('.tuile img, .portrait img').forEach(img => {
@@ -319,6 +319,11 @@ if (window.gsap && !_rm) {
 
   document.body.classList.add('gsapok');
 
+
+  // FILET SÉCURITÉ
+  setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();},200);
+  setTimeout(function(){document.querySelectorAll('section, section *').forEach(function(el){if(parseFloat(getComputedStyle(el).opacity)<0.05){el.style.opacity='1';el.style.transform='none';}});},1500);
+  addEventListener('load',function(){setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();},100);});
   // ── Braises montantes (canvas léger) ──
   const cv = document.getElementById('embers');
   if (cv) {
@@ -390,6 +395,7 @@ if (window.gsap && !_rm) {
   document.querySelectorAll('section').forEach(s=>_io.observe(s));
   document.querySelectorAll('h1 .w span').forEach(s=>s.style.transform='none');
   document.querySelectorAll('[data-count]').forEach(el=>{el.firstChild.textContent=el.dataset.count});
+  document.querySelectorAll('section, section *').forEach(el=>{el.style.opacity='1';el.style.transform='none'});
 }
 </script>
 </body></html>
